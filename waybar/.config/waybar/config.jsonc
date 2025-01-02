@@ -1,0 +1,94 @@
+{
+	///////////////////
+	// Main settings //
+	///////////////////
+
+    "layer": "top",
+    "position": "top",
+
+    /////////////////////////
+    // Modules positioning //
+    /////////////////////////
+
+    "modules-left": [
+    	"hyprland/workspaces"
+	],
+    "modules-center": [
+    	"clock"
+    ],
+    "modules-right": [
+    	"backlight",
+		"wireplumber",
+		"network",
+    	"battery",
+		"hyprland/language"
+    ],
+    
+    /////////////
+    // Modules //
+    /////////////
+
+    /// Left ///
+    "hyprland/workspaces": {
+		"persistent-workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": []	
+		},
+     	"format": "{icon}",
+     	"on-click": "activate",
+     	"format-icons": {
+     		"1": "",
+        	"urgent": "",
+        	"active": "",
+        	"default": ""
+      },
+      "sort-by-number": true
+    },
+
+    /// Center ///
+    "clock": {
+        "interval": 60,
+        "format": "{:%H:%M}",
+        "max-length": 25,
+        "locale": "C"
+    },
+    
+    /// Right ///
+    "backlight": {
+        "format": "{percent}%  {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "wireplumber": {
+    	"format": "{volume}% {icon}",
+    	"format-muted": "",
+    	"on-click": "helvum",
+    	"format-icons": ["", "", ""]
+    },
+    "network": {
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-full": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "hyprland/language": {
+    	"format": "{short}",
+    }
+}
