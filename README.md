@@ -12,7 +12,7 @@ yay -S hyprland waybar wofi dunst \
 
 Clone this repository and run this command inside cloned folder
 ```bash
-stow alacritty hypr waybar wofi micro dunst
+stow alacritty hypr waybar wofi micro dunst home
 ```
 
 Also install Cantarell font from utils folder as well as [date.h](https://github.com/HowardHinnant/date) and [pwvucontrol](https://github.com/saivert/pwvucontrol).
