@@ -1,0 +1,22 @@
+seat * xcursor_theme Adwaita 24
+
+output * bg /home/delta/config/bg.png fill
+
+default_border pixel 2
+default_floating_border pixel 2
+
+# swaymsg -t get_inputs
+
+input "2:7:SynPS/2_Synaptics_TouchPad" {
+	events disabled
+}
+
+input type:keyboard {
+    xkb_layout us,ru
+    xkb_options grp:alt_shift_toggle
+}
+
+for_window [app_id="org.gnome.*"] floating enable
+for_window [app_id="zen-beta" title="Library"] floating enable
+
+include ./config.d/*

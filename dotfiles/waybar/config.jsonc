@@ -1,0 +1,78 @@
+[
+	{
+		"layer": "top",
+		"position": "top",
+
+		////////////////
+		///// LEFT /////
+		////////////////
+
+		"modules-left": [ "sway/workspaces" ],
+
+		"sway/workspaces": {
+			"persistent-workspaces": {
+				"1": [], "2": [], "3": [], "4": []
+			},
+			"format": "{icon}",
+			"format-icons": {
+				"default": "●",
+				"focused": "●■●"
+			}
+		},
+
+		//////////////////
+		///// CENTER /////
+		//////////////////
+
+		"modules-center": [ "clock" ],
+
+		"clock": {
+			"format": "{:%b %d  %R}",
+			"format-alt": "{:%c}"
+		},
+
+
+		/////////////////
+		///// RIGHT /////
+		/////////////////
+
+		"modules-right": [ "backlight", "wireplumber", "battery", "sway/language", "custom/power" ],
+
+		"backlight": {
+			"interval": 2,
+			"format": "{percent}% {icon}",
+			"format-icons": ["", "", "", "", "", "", ""]
+		},
+
+		"wireplumber": {
+			"format": "{volume}%{icon}",
+			"format-muted": "",
+			"format-icons": ["", "", ""]
+		},
+
+		"battery": {
+			"interval": 60,
+			"format": "{capacity}% {icon}",
+			"format-charging": "{capacity}% {icon}󱐋",
+			"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󱟢"],
+		},
+
+		"sway/language": {
+			"format": "{short} {flag}",
+			"on-click": "swaymsg input type:keyboard xkb_switch_layout next",
+		},
+
+		"custom/power": {
+		  "format": "󰤆",
+		  "tooltip": false,
+		  "menu": "on-click",
+		  "menu-file": "$HOME/config/dotfiles/waybar/power_menu.xml",
+		  "menu-actions": {
+		  	"logout": "swaymsg exit",
+		    "shutdown": "shutdown",
+		    "reboot": "reboot",
+		    "suspend": "systemctl suspend",
+		  }
+		}
+	}
+]

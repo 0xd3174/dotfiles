@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <object class="GtkMenu" id="menu">
+		<property name="reserve-toggle-size">False</property>
+
+    <!-- Log out -->
+    <child>
+      <object class="GtkMenuItem" id="logout">
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">6</property>
+
+            <child>
+              <object class="GtkImage">
+                <property name="icon-name">system-log-out</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Log Out</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+
+    <!-- Shutdown -->
+    <child>
+      <object class="GtkMenuItem" id="shutdown">
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">6</property>
+
+            <child>
+              <object class="GtkImage">
+                <property name="icon-name">system-shutdown-symbolic</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Shutdown</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+
+    <!-- Reboot -->
+    <child>
+      <object class="GtkMenuItem" id="reboot">
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">6</property>
+
+            <child>
+              <object class="GtkImage">
+                <property name="icon-name">system-reboot-symbolic</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Reboot</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+
+    <!-- Separator -->
+    <child>
+      <object class="GtkSeparatorMenuItem" id="delimiter1"/>
+    </child>
+
+    <!-- Suspend -->
+    <child>
+      <object class="GtkMenuItem" id="suspend">
+        <child>
+          <object class="GtkBox">
+            <property name="orientation">horizontal</property>
+            <property name="spacing">6</property>
+
+            <child>
+              <object class="GtkImage">
+                <property name="icon-name">media-playback-pause-symbolic</property>
+              </object>
+            </child>
+
+            <child>
+              <object class="GtkLabel">
+                <property name="label">Suspend</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+
+  </object>
+</interface>
