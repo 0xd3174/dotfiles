@@ -1,4 +1,4 @@
-{ pkgs, system, zen-browser, ... }:
+{ pkgs, zen-browser, ... }:
 
 {
 	home.packages = with pkgs; [
@@ -14,7 +14,7 @@
 
 	  bluetuith    # Bluetooth tui
 
-	  ### Multimedia ###
+	  ### Multimedia ###1
 
 	  nautilus    # File manager
 	  baobab      # Disk analyzer

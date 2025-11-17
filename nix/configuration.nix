@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-	constants = import ./constants.nix {};
+	constants = import ./../constants.nix {};
 in
 
 {

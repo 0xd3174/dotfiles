@@ -1,14 +1,14 @@
 { pkgs, ... }:
 
 let
-	constants = import ./constants.nix {};
+	constants = import ./../constants.nix {};
 in
 
 {
   imports = [
-  	./home/dotfiles.nix
-  	./home/apps.nix
-  	./home/fonts.nix
+  	./dotfiles.nix
+  	./apps.nix
+  	./fonts.nix
   ];
 
   home.username = "${constants.username}";

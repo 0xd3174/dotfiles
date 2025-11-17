@@ -19,14 +19,14 @@
       system = "x86_64-linux";
       
       modules = [
-        ./configuration.nix
+        ./nix/configuration.nix
 
         home-manager.nixosModules.home-manager
         {
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.delta = import ./home.nix;
+            users.delta = import ./home/home.nix;
             backupFileExtension = "backup";
 
             extraSpecialArgs = { inherit zen-browser; };
