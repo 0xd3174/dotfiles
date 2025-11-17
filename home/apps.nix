@@ -3,7 +3,11 @@
 {
 	programs.bash = {
 	  enable = true;
+	  
 	  shellAliases = {
+	  	nixr  = "sudo nixos-rebuild switch --flake .";
+	  	nixup = "git add . && git commit -am '🚧'";
+
 	    btw = "echo I use nixos, btw";
 	  };
 	};
