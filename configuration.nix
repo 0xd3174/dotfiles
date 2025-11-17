@@ -29,7 +29,7 @@ in
 
   ### Networking ###
 
-  networking.hostName = "t490nix";
+  networking.hostName = "${constants.hostname}";
 
   networking.networkmanager.enable = true;
   networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
@@ -72,6 +72,14 @@ in
   	wrapperFeatures.gtk = true;
   };
 
+	xdg.portal = {
+ 		enable = true;
+ 		wlr.enable = true;
+		extraPortals = with pkgs; [
+ 	  	xdg-desktop-portal-gtk
+ 		];
+	};
+
   ## Packages
 
   environment.systemPackages = with pkgs; [
@@ -82,10 +90,6 @@ in
     htop
     bind
     # intel-undervolt thinkfan lm_sensors
-  ];
-
-  fonts.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
   ];
 
   system.stateVersion = "25.05";
