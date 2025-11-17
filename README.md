@@ -1,3 +1,5 @@
+![View of desktop](https://github.com/0xd3174/dotfiles/assets/desktop.png)
+
 ```
 .
 └── config/

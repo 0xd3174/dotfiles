@@ -5,6 +5,8 @@
 # Window key
 	set $mod Mod4
 
+floating_modifier $mod normal
+
 set $left h
 set $down j
 set $up k
