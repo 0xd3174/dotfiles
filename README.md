@@ -1,4 +1,4 @@
-![View of desktop](https://github.com/0xd3174/dotfiles/assets/desktop.png)
+![View of desktop](https://github.com/0xd3174/dotfiles/blob/master/assets/desktop.png)
 
 ```
 .
