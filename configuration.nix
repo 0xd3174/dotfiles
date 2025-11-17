@@ -1,5 +1,9 @@
 { config, lib, pkgs, ... }:
 
+let
+	constants = import ./constants.nix {};
+in
+
 {
   imports = [ ./hardware.nix ];
 
@@ -54,7 +58,7 @@
 
   ### High Level System ###
 
-  users.users.delta = {
+  users.users.${constants.username} = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "input" ];
     hashedPassword = "!";
