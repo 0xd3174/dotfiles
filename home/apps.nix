@@ -1,6 +1,13 @@
 { pkgs, zen-browser, ... }:
 
 {
+	programs.bash = {
+	  enable = true;
+	  shellAliases = {
+	    btw = "echo I use nixos, btw";
+	  };
+	};
+	
 	home.packages = with pkgs; [
 	  #aseprite # Pixel image editor
 
