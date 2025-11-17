@@ -14,8 +14,14 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, ... }: {
-    nixosConfigurations.t490nix = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, home-manager, zen-browser, ... }:
+
+	let
+		constants = import ./constants.nix {};
+	in
+
+  {
+    nixosConfigurations.${constants.hostname} = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       
       modules = [
@@ -26,7 +32,7 @@
           home-manager = {
             useGlobalPkgs = true;
             useUserPackages = true;
-            users.delta = import ./home/home.nix;
+            users.${constants.username} = import ./home/home.nix;
             backupFileExtension = "backup";
 
             extraSpecialArgs = { inherit zen-browser; };
