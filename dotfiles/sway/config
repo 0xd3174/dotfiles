@@ -1,6 +1,6 @@
 seat * xcursor_theme Adwaita 24
 
-output * bg /home/delta/config/bg.png fill
+output * bg /home/delta/config/assets/bg.png fill
 
 default_border pixel 2
 default_floating_border pixel 2
