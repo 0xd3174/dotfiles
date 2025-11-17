@@ -1,7 +1,7 @@
 ```
 .
 └── config/
-    ├── assets/       - files, that not
+    ├── assets/       - some media files
     │   └── bg.png
     ├── dotfiles/     - .config mostly files
     ├── home/         - home manager config
