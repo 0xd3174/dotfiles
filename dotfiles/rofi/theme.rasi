@@ -37,8 +37,9 @@ inputbar {
 
 icon-search {
     expand:     false;
-    filename:   "search";
+    filename:   "./search.svg";
     size: 28px;
+    tint: rgba(255, 255, 255, 1.0);
 }
 
 icon-search, entry, element-icon, element-text {
