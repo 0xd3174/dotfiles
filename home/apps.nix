@@ -12,7 +12,9 @@
 	  	nixr  = "sudo nixos-rebuild switch --flake .";
 	  	nixup = "git add . && git commit -am '🚧'";
 
-	  	cd = "z" # Zoxide
+			# Zoxide
+			z = "zoxide";
+	  	cd = "zoxide";
 
 	    btw = "echo I use nixos, btw";
 	  };
