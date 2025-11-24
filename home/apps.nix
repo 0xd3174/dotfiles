@@ -3,6 +3,7 @@
 {
 	imports = [ 
 		./apps/syncthing.nix
+		./apps/zoxide.nix
 	];
 
 	programs.bash = {
@@ -12,10 +13,6 @@
 	  	nixr  = "sudo nixos-rebuild switch --flake .";
 	  	nixup = "git add . && git commit -am '🚧'";
 
-			# Zoxide
-			z = "zoxide";
-	  	cd = "zoxide";
-
 	    btw = "echo I use nixos, btw";
 	  };
 	};
@@ -24,7 +21,6 @@
 	  #aseprite # Pixel image editor
 
 	  zen-browser.packages."${system}".default
-	  zoxide
 
 	  ### System ###
 
