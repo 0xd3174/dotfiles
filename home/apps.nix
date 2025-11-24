@@ -1,12 +1,18 @@
 { pkgs, zen-browser, ... }:
 
 {
+	imports = [ 
+		./apps/syncthing.nix
+	];
+
 	programs.bash = {
 	  enable = true;
 	  
 	  shellAliases = {
 	  	nixr  = "sudo nixos-rebuild switch --flake .";
 	  	nixup = "git add . && git commit -am '🚧'";
+
+	  	cd = "z" # Zoxide
 
 	    btw = "echo I use nixos, btw";
 	  };
@@ -16,6 +22,7 @@
 	  #aseprite # Pixel image editor
 
 	  zen-browser.packages."${system}".default
+	  zoxide
 
 	  ### System ###
 

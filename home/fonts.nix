@@ -5,6 +5,7 @@
 
   home.packages = with pkgs; [
 		nerd-fonts.jetbrains-mono
+		
     adwaita-fonts
     adwaita-icon-theme
   ];
