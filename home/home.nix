@@ -9,6 +9,7 @@ in
   	./dotfiles.nix
   	./apps.nix
   	./fonts.nix
+  	./syncthing.nix
   ];
 
   home.username = "${constants.username}";
