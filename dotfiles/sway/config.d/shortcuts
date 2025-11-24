@@ -18,7 +18,7 @@ set $right l
 
 set $term alacritty
 
-set $menu rofi -show drun
+set $menu rofi -show drun -show-icons
 
 ###########
 ### Run ### 
