@@ -88,7 +88,7 @@ in
     git
     micro
     htop
-    bind
+    bind jq
     # intel-undervolt thinkfan lm_sensors
   ];
 

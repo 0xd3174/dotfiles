@@ -25,8 +25,10 @@ set $menu rofi -show drun -show-icons
 ###########
 
 # Screenshot
-	bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
+	#bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
 
+	bindsym Print exec ~/config/dotfiles/sway/screenshot.sh
+	
 # Terminal
 	bindsym $mod+Return exec $term
 
