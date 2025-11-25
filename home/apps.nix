@@ -21,6 +21,7 @@
 	  #aseprite # Pixel image editor
 
 	  zen-browser.packages."${system}".default
+	  satty
 
 	  ### System ###
 
