@@ -27,7 +27,13 @@ set $menu rofi -show drun -show-icons
 # Screenshot
 	#bindsym Print exec grim -g "$(slurp)" -t png - | wl-copy -t image/png
 
-	bindsym Print exec ~/config/dotfiles/sway/screenshot.sh
+	bindsym Print exec grim -g "$(slurp)" -t ppm - | satty \
+		  --filename - \
+		  --output-filename ~/Pictures/Screenshots/Screenshot_$time.png \
+			--init-tool brush \
+			--copy-command wl-copy \
+			--early-exit \
+			--action-on-enter save-to-clipboard
 	
 # Terminal
 	bindsym $mod+Return exec $term
