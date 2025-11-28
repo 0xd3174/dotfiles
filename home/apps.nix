@@ -20,6 +20,8 @@
 	home.packages = with pkgs; [
 	  #aseprite # Pixel image editor
 
+	  godotPackages_4_5.godot-mono
+
 	  zen-browser.packages."${system}".default
 	  satty
 
