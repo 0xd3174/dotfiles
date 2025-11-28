@@ -23,7 +23,6 @@
 		extensions = with pkgs; [
 			vscode-extensions.ms-dotnettools.csharp
 			vscode-extensions.ms-dotnettools.csdevkit
-			vscode-extensions.ms-vscode.mono-debug
 		];
 	};
 	
