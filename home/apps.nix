@@ -16,6 +16,17 @@
 	    btw = "echo I use nixos, btw";
 	  };
 	};
+
+	programs.vscode = {
+		enable = true;
+
+		extensions = with pkgs; [
+			vscode-extensions.ms-dotnettools.csharp
+			vscode-extensions.ms-dotnettools.csdevkit
+			vscode-extensions.neikeq.godot-csharp-vscode
+			vscode-extensions.ms-vscode.mono-debug
+		];
+	};
 	
 	home.packages = with pkgs; [
 	  #aseprite # Pixel image editor
@@ -51,7 +62,6 @@
 
 		### Code ###
 
-	  vscode # Main code editor
 	  helix  # Terminal code editor
 
 	  ### Flexing ###

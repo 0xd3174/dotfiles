@@ -19,6 +19,8 @@ input type:keyboard {
 for_window [app_id="org.gnome.*"] floating enable
 for_window [app_id="zen-beta" title="Library"] floating enable
 
+for_window [title="Please Confirm..."] floating enable
+
 for_window [app_id="xdg-desktop-portal-gtk"] floating enable
 
 include ./config.d/*
