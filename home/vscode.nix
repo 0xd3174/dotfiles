@@ -6,8 +6,8 @@ let
       name = "solarized";
       publisher = "ryanolsonx";
       version = "3.0.0";
+      sha256 = "sha256-/mcaH3ms8yqfzTlaejH8xiT7wi19P7PdUeWS/6R+Ezg=";
     };
-    hash = "sha256-/mcaH3ms8yqfzTlaejH8xiT7wi19P7PdUeWS/6R+Ezg=";
   };
 in
 
