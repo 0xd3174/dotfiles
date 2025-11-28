@@ -16,15 +16,6 @@
 	    btw = "echo I use nixos, btw";
 	  };
 	};
-
-	programs.vscode = {
-		enable = true;
-
-		profiles.default.extensions = with pkgs; [
-			vscode-extensions.ms-dotnettools.csharp
-			vscode-extensions.ms-dotnettools.csdevkit
-		];
-	};
 	
 	home.packages = with pkgs; [
 	  #aseprite # Pixel image editor
