@@ -20,6 +20,7 @@
 	home.packages = with pkgs; [
 	  #aseprite # Pixel image editor
 
+		dotnet-sdk
 	  godotPackages_4_5.godot-mono
 
 	  zen-browser.packages."${system}".default
