@@ -20,7 +20,7 @@
 	programs.vscode = {
 		enable = true;
 
-		extensions = with pkgs; [
+		profiles.default.extensions = with pkgs; [
 			vscode-extensions.ms-dotnettools.csharp
 			vscode-extensions.ms-dotnettools.csdevkit
 		];
