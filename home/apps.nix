@@ -22,6 +22,7 @@
 	  #aseprite # Pixel image editor
 
 		dotnet-sdk
+		dotnet-runtime
 	  godotPackages_4_5.godot-mono
 
 	  zen-browser.packages."${system}".default
