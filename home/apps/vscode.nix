@@ -21,8 +21,8 @@ in
 
 		profiles.godot.extensions = with pkgs.vscode-extensions; [
 			ms-dotnettools.csharp
-			ms-dotnettools.csdevkit
-			ms-dotnettools.vscode-dotnet-runtime
+			#ms-dotnettools.csdevkit
+			#ms-dotnettools.vscode-dotnet-runtime
 
 			github.copilot
 			github.copilot-chat
