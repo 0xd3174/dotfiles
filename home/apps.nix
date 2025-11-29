@@ -4,6 +4,7 @@
 	imports = [ 
 		./apps/syncthing.nix
 		./apps/zoxide.nix
+		./apps/vscode.nix
 	];
 
 	programs.bash = {

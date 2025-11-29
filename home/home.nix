@@ -9,7 +9,6 @@ in
   	./dotfiles.nix
   	./apps.nix
   	./fonts.nix
-  	./vscode.nix
   ];
 
   home.username = "${constants.username}";
