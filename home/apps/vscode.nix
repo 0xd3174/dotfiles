@@ -19,11 +19,7 @@ in
 			solarized-theme
 		];
 
-		profiles.godot.extensions = with pkgs.vscode-extensions; [
-			ms-dotnettools.csharp
-			#ms-dotnettools.csdevkit
-			#ms-dotnettools.vscode-dotnet-runtime
-
+		profiles.ts.extensions = with pkgs.vscode-extensions; [
 			github.copilot
 			github.copilot-chat
 		];
