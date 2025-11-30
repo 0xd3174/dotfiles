@@ -6,8 +6,8 @@ in
 
 {
   imports = [
-  	./undervolt.nix
-  	./hardware.nix
+    ./undervolt.nix
+    ./hardware.nix
   ];
 
   ### Low Level System ###
