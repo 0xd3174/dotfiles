@@ -7,7 +7,7 @@ in
 {
   imports = [
     ./dotfiles.nix
-    ./apps.nix
+    ./packages.nix
     ./fonts.nix
   ];
 

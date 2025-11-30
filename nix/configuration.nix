@@ -92,7 +92,6 @@ in
     htop
     bind
     jq
-    # intel-undervolt thinkfan lm_sensors
   ];
 
   system.stateVersion = "25.05";

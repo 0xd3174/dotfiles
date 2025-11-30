@@ -12,27 +12,20 @@
 
     shellAliases = {
       nixr = "sudo nixos-rebuild switch --flake .";
-      nixup = "git add . && git commit -am '🚧'";
-
-      btw = "echo I use nixos, btw";
+      nixup = "nix fmt . && git add . && git commit -am '🚧'";
     };
   };
 
   home.packages = with pkgs; [
     #aseprite # Pixel image editor
 
-    jetbrains.rider
-    dotnet-sdk_8 
-
     obs-studio
-    
-    godotPackages_4_5.godot-mono
 
     satty
 
     ### System ###
 
-		alacritty
+    alacritty
     waybar # Status bar
     wl-clipboard # Clipboard
     rofi # App Launcher
@@ -69,7 +62,9 @@
     sing-box # Proxy utility
 
     obsidian # Notes
-  ] ++ [
-    inputs.zen-browser.packages."${system}".default
-  ];
-}
+  ] ++
+  with inputs;
+  [
+  zen-browser.packages."${system}".default
+    ];
+    }
