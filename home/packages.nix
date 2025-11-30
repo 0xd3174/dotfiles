@@ -62,9 +62,7 @@
     sing-box # Proxy utility
 
     obsidian # Notes
-  ] ++
-  with inputs;
-  [
-  zen-browser.packages."${system}".default
-    ];
-    }
+  ] ++ [
+  	inputs.zen-browser.packages."${system}".default
+  ];
+}
