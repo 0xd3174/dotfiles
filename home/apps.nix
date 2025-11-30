@@ -23,6 +23,8 @@
 
     jetbrains.rider
     dotnet-sdk_8 
+
+    obs-studio
     
     godotPackages_4_5.godot-mono
 
