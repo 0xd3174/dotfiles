@@ -5,7 +5,10 @@ let
 in
 
 {
-  imports = [ ./hardware.nix ];
+  imports = [
+  	./undervolt.nix
+  	./hardware.nix
+  ];
 
   ### Low Level System ###
 
@@ -89,7 +92,6 @@ in
     htop
     bind
     jq
-    intel-undervolt
     # intel-undervolt thinkfan lm_sensors
   ];
 
