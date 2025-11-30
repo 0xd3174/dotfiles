@@ -89,6 +89,7 @@ in
     htop
     bind
     jq
+    intel-undervolt
     # intel-undervolt thinkfan lm_sensors
   ];
 
