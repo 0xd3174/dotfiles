@@ -22,6 +22,8 @@
     #aseprite # Pixel image editor
 
     jetbrains.rider
+    dotnet-sdk_8 
+    
     godotPackages_4_5.godot-mono
 
     satty
