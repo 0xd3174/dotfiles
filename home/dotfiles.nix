@@ -25,4 +25,9 @@ in
     source = symlink "${dotfiles}/waybar/";
     recursive = true;
   };
+
+  xdg.configFile."fastfetch" = {
+    source = symlink "${dotfiles}/fastfetch/";
+    recursive = true;
+  };
 }

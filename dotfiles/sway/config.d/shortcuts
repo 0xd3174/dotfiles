@@ -41,6 +41,8 @@ set $menu rofi -show drun -show-icons
 # App launcher
 	bindsym $mod+Space exec $menu
 
+# File explorer
+	bindsym $mod+E exec nautilus
 
 # Special keys to adjust volume via PulseAudio
   bindsym --locked XF86AudioMute exec pactl set-sink-mute \@DEFAULT_SINK@ toggle
@@ -56,11 +58,26 @@ set $menu rofi -show drun -show-icons
 ### Sway ###
 ############
 
-# Kill
+# Kill active window
 	bindsym $mod+w kill
 
-# Reload
-	bindsym $mod+Shift+c reload
+# Exit sway
+	bindsym $mod+Shift+q exit
+
+# Toggle floating
+  bindsym $mod+f floating toggle
+
+# Toggle fullscreen
+	bindsym $mod+Shift+f fullscreen toggle
+
+# Split window
+	bindsym $mod+s split toggle
+
+# Clipboard history
+	#bindsym $mod+v cliphist
+
+# Reload config
+	bindsym $mod+Shift+r reload
 
 # Focus
 	bindsym $mod+$left focus left
@@ -107,16 +124,6 @@ set $menu rofi -show drun -show-icons
   bindsym $mod+Shift+8 move container to workspace number 8
   bindsym $mod+Shift+9 move container to workspace number 9
   bindsym $mod+Shift+0 move container to workspace number 10
-
-# Split
-  #bindsym $mod+h splith
-  bindsym $mod+v splitv
-
-# Make the current focus fullscreen
-  bindsym $mod+f fullscreen
-
-# Toggle the current focus between tiling and floating mode
-  bindsym $mod+Shift+space floating toggle
 
 mode "resize" {
     bindsym $left resize shrink width 10px
