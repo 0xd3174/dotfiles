@@ -28,6 +28,7 @@
 
     ### System ###
 
+		alacritty
     waybar # Status bar
     wl-clipboard # Clipboard
     rofi # App Launcher

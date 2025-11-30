@@ -83,7 +83,6 @@ in
   ## Packages
 
   environment.systemPackages = with pkgs; [
-    alacritty
     wget
     git
     micro
