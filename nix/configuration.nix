@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 let
-	constants = import ./../constants.nix {};
+  constants = import ./../constants.nix { };
 in
 
 {
@@ -39,17 +39,17 @@ in
 
   networking.firewall.allowedTCPPorts = [ 5173 ]; # vite --host
 
-	### Sounds ###
+  ### Sounds ###
 
-	security.rtkit.enable = true;
-	services.pipewire = {
-	  enable = true;
-	  alsa.enable = true;
-	  alsa.support32Bit = true;
-	  pulse.enable = true;
-	};
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
-	hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = true;
 
   ### Language ###
 
@@ -68,17 +68,17 @@ in
 
   services.displayManager.ly.enable = true;
   programs.sway = {
-  	enable = true;
-  	wrapperFeatures.gtk = true;
+    enable = true;
+    wrapperFeatures.gtk = true;
   };
 
-	xdg.portal = {
- 		enable = true;
- 		wlr.enable = true;
-		extraPortals = with pkgs; [
- 	  	xdg-desktop-portal-gtk
- 		];
-	};
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+    ];
+  };
 
   ## Packages
 
@@ -88,7 +88,8 @@ in
     git
     micro
     htop
-    bind jq
+    bind
+    jq
     # intel-undervolt thinkfan lm_sensors
   ];
 

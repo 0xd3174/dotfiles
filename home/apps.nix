@@ -1,69 +1,70 @@
-{ pkgs, zen-browser, ... }:
+{ inputs, pkgs, ... }:
 
 {
-	imports = [ 
-		./apps/syncthing.nix
-		./apps/zoxide.nix
-		./apps/vscode.nix
-	];
+  imports = [
+    ./apps/syncthing.nix
+    ./apps/zoxide.nix
+    ./apps/vscode.nix
+  ];
 
-	programs.bash = {
-	  enable = true;
-	  
-	  shellAliases = {
-	  	nixr  = "sudo nixos-rebuild switch --flake .";
-	  	nixup = "git add . && git commit -am '🚧'";
+  programs.bash = {
+    enable = true;
 
-	    btw = "echo I use nixos, btw";
-	  };
-	};
-	
-	home.packages = with pkgs; [
-	  #aseprite # Pixel image editor
+    shellAliases = {
+      nixr = "sudo nixos-rebuild switch --flake .";
+      nixup = "git add . && git commit -am '🚧'";
 
-		jetbrains.rider
-	  godotPackages_4_5.godot-mono
+      btw = "echo I use nixos, btw";
+    };
+  };
 
-	  zen-browser.packages."${system}".default
-	  satty
+  home.packages = with pkgs; [
+    #aseprite # Pixel image editor
 
-	  ### System ###
+    jetbrains.rider
+    godotPackages_4_5.godot-mono
 
-	  waybar       # Status bar
-	  wl-clipboard # Clipboard
-	  rofi         # App Launcher
+    satty
 
-	  bluetuith    # Bluetooth tui
+    ### System ###
 
-	  ### Multimedia ###1
+    waybar # Status bar
+    wl-clipboard # Clipboard
+    rofi # App Launcher
 
-	  nautilus    # File manager
-	  baobab      # Disk analyzer
-	  loupe       # Image viewer
-	  decibels    # Audio files
-	  showtime    # Video player
-	  papers      # Document viewer
-	  kdePackages.ark # File (de)compression
+    bluetuith # Bluetooth tui
 
-	  ### Screenshot ###
+    ### Multimedia ###1
 
-	  grim  # Screenshot for region
-	  slurp # Region chooser
+    nautilus # File manager
+    baobab # Disk analyzer
+    loupe # Image viewer
+    decibels # Audio files
+    showtime # Video player
+    papers # Document viewer
+    kdePackages.ark # File (de)compression
 
-		### Code ###
+    ### Screenshot ###
 
-	  helix  # Terminal code editor
+    grim # Screenshot for region
+    slurp # Region chooser
 
-	  ### Flexing ###
+    ### Code ###
 
-	  fastfetch # Fetch backend
-	  hyfetch   # Fetch lgbt+ styles
-	  pipes     # Screensaver
+    helix # Terminal code editor
 
-	  ### Other ###
+    ### Flexing ###
 
-	  sing-box # Proxy utility
+    fastfetch # Fetch backend
+    hyfetch # Fetch lgbt+ styles
+    pipes # Screensaver
 
-	  obsidian # Notes
-	];
+    ### Other ###
+
+    sing-box # Proxy utility
+
+    obsidian # Notes
+  ] ++ [
+    inputs.zen-browser.packages."${system}".default
+  ];
 }

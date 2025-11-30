@@ -22,7 +22,7 @@ in
   };
 
   xdg.configFile."waybar" = {
-		source = symlink "${dotfiles}/waybar/";
+    source = symlink "${dotfiles}/waybar/";
     recursive = true;
   };
 }

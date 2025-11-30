@@ -10,37 +10,37 @@
     };
 
     zen-browser = {
-   		url = "github:0xc000022070/zen-browser-flake";
+      url = "github:0xc000022070/zen-browser-flake";
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, ... }:
+  outputs = { self, nixpkgs, home-manager, zen-browser, ... }@inputs:
 
-	let
-		constants = import ./constants.nix {};
-	in
+    let
+      constants = import ./constants.nix { };
+    in
 
-  {
-    nixosConfigurations.${constants.hostname} = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      
-      modules = [
-        ./nix/configuration.nix
+    {
+      nixosConfigurations.${constants.hostname} = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
 
-        home-manager.nixosModules.home-manager
-        {
-          home-manager = {
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            users.${constants.username} = import ./home/home.nix;
-            backupFileExtension = "backup";
+        modules = [
+          ./nix/configuration.nix
 
-            extraSpecialArgs = { inherit zen-browser; };
-          };
-        }
-      ];
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.${constants.username} = import ./home/home.nix;
+              backupFileExtension = "backup";
+
+              extraSpecialArgs = { inherit inputs; };
+            };
+          }
+        ];
+      };
+
+      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
     };
-
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
-  };
 }

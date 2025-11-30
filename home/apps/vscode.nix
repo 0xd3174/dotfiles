@@ -12,16 +12,18 @@ let
 in
 
 {
-	programs.vscode = {
-		enable = true;
+  programs.vscode = {
+    enable = true;
 
-		profiles.default.extensions = [
-			solarized-theme
-		];
+    profiles.default.extensions = [
+      solarized-theme
+    ];
 
-		profiles.ts.extensions = with pkgs.vscode-extensions; [
-			github.copilot
-			github.copilot-chat
-		];
-	};
+    profiles.ts.extensions = with pkgs.vscode-extensions; [
+      bradlc.vscode-tailwindcss
+      esbenp.prettier-vscode
+      github.copilot
+      github.copilot-chat
+    ];
+  };
 }
