@@ -24,6 +24,7 @@ in
       esbenp.prettier-vscode
       github.copilot
       github.copilot-chat
+      styled-components.vscode-styled-components
     ];
   };
 }
