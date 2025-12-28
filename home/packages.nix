@@ -20,6 +20,8 @@
   home.packages = with pkgs; [
     #aseprite # Pixel image editor
 
+    prismlauncher-unwrapped
+
     obs-studio
 
     satty
