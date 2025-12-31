@@ -25,6 +25,7 @@
     obs-studio
 
     satty
+    xray
 
     ### System ###
 
