@@ -12,19 +12,27 @@ let
 in
 
 {
+  home.packages = with pkgs; [
+    nim
+  ];
+
   programs.vscode = {
     enable = true;
 
     profiles.default.extensions = [
       solarized-theme
+      github.copilot
+      github.copilot-chat
     ];
 
     profiles.ts.extensions = with pkgs.vscode-extensions; [
       bradlc.vscode-tailwindcss
       esbenp.prettier-vscode
-      github.copilot
-      github.copilot-chat
       styled-components.vscode-styled-components
+    ];
+
+    profiles.nim.extensions = with  pkgs.vscode-extensions; [
+      nimlang.nimlang
     ];
   };
 }
