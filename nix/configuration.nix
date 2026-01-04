@@ -73,6 +73,10 @@ in
   programs.sway = {
     enable = true;
     wrapperFeatures.gtk = true;
+
+    extraPackages = with pkgs; [
+      wayvnc
+    ];
   };
 
   xdg.portal = {
