@@ -19,19 +19,6 @@ let
 in
 
 {
-  home.packages = with pkgs; [
-    nim
-    nimble
-    nimlangserver
-    raylib
-    libGL
-    wayland-protocols
-    libxkbcommon
-    libxkbcommon-wayland
-    pipewire
-    alsa-lib
-  ];
-
   programs.vscode = {
     enable = true;
 
