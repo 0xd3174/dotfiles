@@ -23,6 +23,13 @@ in
     nim
     nimble
     nimlangserver
+    raylib
+    libGL
+    wayland-protocols
+    libxkbcommon
+    libxkbcommon-wayland
+    pipewire
+    alsa-lib
   ];
 
   programs.vscode = {
