@@ -19,6 +19,11 @@ let
 in
 
 {
+  home.packages = with pkgs; [
+    nim
+    nimble
+  ];
+
   programs.vscode = {
     enable = true;
 
