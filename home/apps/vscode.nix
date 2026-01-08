@@ -22,6 +22,7 @@ in
   home.packages = with pkgs; [
     nim
     nimble
+    nimlangserver
   ];
 
   programs.vscode = {
