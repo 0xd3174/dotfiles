@@ -39,7 +39,6 @@ in
 
     profiles.nim.extensions = with  pkgs.vscode-extensions; [
       nimlang.nimlang
-      arnetheduck.vscode-nph
     ] ++ sharedExtensions;
   };
 }
