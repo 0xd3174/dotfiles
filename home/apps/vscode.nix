@@ -23,6 +23,7 @@ in
     nim
     nimble
     nimlangserver
+    nph
   ];
 
   programs.vscode = {
