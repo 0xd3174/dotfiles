@@ -24,8 +24,6 @@ in
     nimble
     nimlangserver
     nph
-
-    deno
   ];
 
   programs.vscode = {
@@ -41,10 +39,6 @@ in
 
     profiles.nim.extensions = with  pkgs.vscode-extensions; [
       nimlang.nimlang
-    ] ++ sharedExtensions;
-
-    profiles.deno.extensions = with pkgs.vscode-extensions; [
-      denoland.vscode-deno
     ] ++ sharedExtensions;
   };
 }
