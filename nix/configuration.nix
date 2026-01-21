@@ -97,6 +97,7 @@ in
     bind
     jq
     brightnessctl
+    pipewire-pulse
   ];
 
   system.stateVersion = "25.05";
