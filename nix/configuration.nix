@@ -96,6 +96,7 @@ in
     htop
     bind
     jq
+    brightnessctl
   ];
 
   system.stateVersion = "25.05";
