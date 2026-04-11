@@ -26,6 +26,7 @@ in
     nimlangserver
     nph
     # Python
+    python313
     uv
     rustc
     cargo
