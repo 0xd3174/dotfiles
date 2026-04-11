@@ -20,10 +20,13 @@ in
 
 {
   home.packages = with pkgs; [
+    # Nim
     nim
     nimble
     nimlangserver
     nph
+    # Python
+    uv
   ];
 
   programs.vscode = {
@@ -39,6 +42,11 @@ in
 
     profiles.nim.extensions = with  pkgs.vscode-extensions; [
       nimlang.nimlang
+    ] ++ sharedExtensions;
+
+    profiles.python.extensions = with  pkgs.vscode-extensions; [
+      ms-python.python
+      ms-python.vscode-pylance
     ] ++ sharedExtensions;
   };
 }
