@@ -19,15 +19,6 @@ let
 in
 
 {
-  imports = [
-    (fetchTarball {
-      url = "https://github.com/nix-community/nixos-vscode-server/tarball/master";
-      sha256 = "sha256-0xjal4zcbmdjdaspfkjbpx1680q7390wfzmj7iad04kp3pc9syf8=";
-    })
-  ];
-
-  services.vscode-server.enable = true;
-
   home.packages = with pkgs; [
     nim
     nimble
