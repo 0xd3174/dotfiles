@@ -27,6 +27,9 @@ in
     nph
     # Python
     uv
+    rustc
+    cargo
+    gcc
   ];
 
   programs.vscode = {
