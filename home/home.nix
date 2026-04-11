@@ -14,8 +14,6 @@ in
   home.username = "${constants.username}";
   home.homeDirectory = "/home/${constants.username}";
 
-  services.openssh.enable = true;
-
   home.pointerCursor = {
     name = "Adwaita";
 

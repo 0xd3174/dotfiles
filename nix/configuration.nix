@@ -42,6 +42,8 @@ in
 
   networking.firewall.allowedTCPPorts = [ 5173 ]; # vite --host
 
+  services.openssh.enable = true;
+
   ### Sounds ###
 
   security.rtkit.enable = true;
