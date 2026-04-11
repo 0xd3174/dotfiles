@@ -20,7 +20,10 @@ in
 
 {
   imports = [
-    "${fetchTarball "https://github.com/msteen/nixos-vscode-server/tarball/master"}/modules/vscode-server/home.nix"
+    (fetchTarball {
+      url = "https://github.com/nix-community/nixos-vscode-server/tarball/master";
+      sha256 = "sha256-0xjal4zcbmdjdaspfkjbpx1680q7390wfzmj7iad04kp3pc9syf8=";
+    })
   ];
 
   services.vscode-server.enable = true;
