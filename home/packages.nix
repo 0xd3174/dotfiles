@@ -65,7 +65,9 @@
 
     sing-box # Proxy utility
 
-    obsidian # Notes
+    obsidian # Notesi
+
+    python315
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
