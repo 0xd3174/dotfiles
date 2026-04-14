@@ -41,8 +41,11 @@ in
   networking.firewall.trustedInterfaces = [ "tun0" ]; # sing-box tun
 
   networking.firewall.allowedTCPPorts = [ 5173 ]; # vite --host
+  networking.nftables.enable = true;
 
   services.openssh.enable = true;
+
+  virtualisation.docker.enable = true;
 
   ### Sounds ###
 
@@ -65,7 +68,7 @@ in
 
   users.users.${constants.username} = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "audio" "video" "input" ];
+    extraGroups = [ "wheel" "audio" "video" "input" "docker" ];
     hashedPassword = "!";
   };
 
@@ -101,6 +104,11 @@ in
 
     brightnessctl
     pulseaudio
+
+    nftables
+    iproute2
+    iptables
+    coreutils
   ];
 
   system.stateVersion = "25.05";

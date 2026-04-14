@@ -5,7 +5,7 @@
     ./apps/syncthing.nix
     ./apps/zoxide.nix
     ./apps/vscode.nix
-    ./apps/rider.nix
+#    ./apps/rider.nix
   ];
 
   programs.bash = {
@@ -64,6 +64,7 @@
     ### Other ###
 
     sing-box # Proxy utility
+    xray
 
     obsidian # Notesi
   ] ++ [
