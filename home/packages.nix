@@ -22,9 +22,9 @@
       enable = true;
 
       default-timeout = 3;
-    }
-      # Terminal Emulator
-      programs.alacritty.enable = true;
+    };
+  # Terminal Emulator
+  programs.alacritty.enable = true;
   # App Launcher
   programs.fuzzel.enable = true;
 
