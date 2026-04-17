@@ -5,7 +5,6 @@
     ./apps/syncthing.nix
     ./apps/zoxide.nix
     ./apps/vscode.nix
-    #    ./apps/rider.nix
   ];
 
   programs.bash = {
@@ -17,23 +16,25 @@
     };
   };
 
+  # Notif Daemon
+  services.mako.enable = true;
+  # Terminal Emulator
+  programs.alacritty.enable = true;
+  # App Launcher
+  programs.fuzzel.enable = true;
+
+  # Screen Recorder
+  programs.obs-studio.enable = true;
+
+
   home.packages = with pkgs; [
     #aseprite # Pixel image editor
 
-    prismlauncher-unwrapped
-
-    obs-studio
-
-    xray
-
     ### System ###
 
-    alacritty # Terminal emulator
     waybar # Status bar
     wl-clipboard # Clipboard
     # rofi # App Launcher
-    fuzzel # App Launcher
-    mako # Notification daemon
 
     bluetuith # Bluetooth tui
 
@@ -67,7 +68,7 @@
     sing-box # Proxy utility
     xray
 
-    obsidian # Notesi
+    obsidian # Notes
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];

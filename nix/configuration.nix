@@ -26,7 +26,6 @@ in
 
   security.polkit = {
     enable = true;
-    package = pkgs.polkit_gnome;
   };
 
   ### Peripherals ###
