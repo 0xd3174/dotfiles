@@ -17,9 +17,14 @@
   };
 
   # Notif Daemon
-  services.mako.enable = true;
-  # Terminal Emulator
-  programs.alacritty.enable = true;
+  services.mako =
+    {
+      enable = true;
+
+      default-timeout = 3;
+    }
+      # Terminal Emulator
+      programs.alacritty.enable = true;
   # App Launcher
   programs.fuzzel.enable = true;
 
