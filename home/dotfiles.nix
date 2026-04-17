@@ -16,8 +16,13 @@ in
     recursive = true;
   };
 
-  xdg.configFile."sway" = {
-    source = symlink "${dotfiles}/sway/";
+  # xdg.configFile."sway" = {
+  #   source = symlink "${dotfiles}/sway/";
+  #   recursive = true;
+  # };
+
+  xdg.configFile."niri" = {
+    source = symlink "${dotfiles}/niri/";
     recursive = true;
   };
 
