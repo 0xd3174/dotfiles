@@ -24,20 +24,20 @@
 
     obs-studio
 
-    satty
     xray
 
     ### System ###
 
-    alacritty
+    alacritty # Terminal emulator
     waybar # Status bar
     wl-clipboard # Clipboard
     # rofi # App Launcher
-    fuzzel
+    fuzzel # App Launcher
+    mako # Notification daemon
 
     bluetuith # Bluetooth tui
 
-    ### Multimedia ###1
+    ### Multimedia ###
 
     nautilus # File manager
     baobab # Disk analyzer
