@@ -75,14 +75,20 @@ in
   ### DE/WM
 
   services.displayManager.ly.enable = true;
-  programs.sway = {
-    enable = true;
-    wrapperFeatures.gtk = true;
 
-    extraPackages = with pkgs; [
-      wayvnc
-    ];
+  programs.niri = {
+    enable = true;
+    useNautilus = true;
   };
+
+  #   programs.sway = {
+  #     enable = true;
+  #     wrapperFeatures.gtk = true;
+  # 
+  #     extraPackages = with pkgs; [
+  #       wayvnc
+  #     ];
+  #   };
 
   xdg.portal = {
     enable = true;
@@ -104,11 +110,6 @@ in
 
     brightnessctl
     pulseaudio
-
-    nftables
-    iproute2
-    iptables
-    coreutils
   ];
 
   system.stateVersion = "25.05";
