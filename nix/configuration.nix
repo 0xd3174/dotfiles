@@ -24,99 +24,99 @@ in
 
   nixpkgs.config.allowUnfree = true;
 
-  security.polkit {
-  enable = true;
-  package = pkgs.polkit_gnome;
-};
+  security.polkit = {
+    enable = true;
+    package = pkgs.polkit_gnome;
+  };
 
-### Peripherals ###
+  ### Peripherals ###
 
-services.libinput.touchpad.sendEventsMode = "disabled"; # Disable touchpad
+  services.libinput.touchpad.sendEventsMode = "disabled"; # Disable touchpad
 
-### Networking ###
+  ### Networking ###
 
-networking.hostName = "${constants.hostname}";
+  networking.hostName = "${constants.hostname}";
 
-networking.networkmanager.enable = true;
-networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
+  networking.networkmanager.enable = true;
+  networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
-networking.firewall.checkReversePath = "loose";
-networking.firewall.trustedInterfaces = [ "tun0" ]; # sing-box tun
+  networking.firewall.checkReversePath = "loose";
+  networking.firewall.trustedInterfaces = [ "tun0" ]; # sing-box tun
 
-networking.firewall.allowedTCPPorts = [ 5173 ]; # vite --host
-networking.nftables.enable = true;
+  networking.firewall.allowedTCPPorts = [ 5173 ]; # vite --host
+  networking.nftables.enable = true;
 
-services.openssh.enable = true;
+  services.openssh.enable = true;
 
-virtualisation.docker.enable = true;
+  virtualisation.docker.enable = true;
 
-### Sounds ###
+  ### Sounds ###
 
-security.rtkit.enable = true;
-services.pipewire = {
-enable = true;
-alsa.enable = true;
-alsa.support32Bit = true;
-pulse.enable = true;
-};
+  security.rtkit.enable = true;
+  services.pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
 
-hardware.bluetooth.enable = true;
+  hardware.bluetooth.enable = true;
 
-### Language ###
+  ### Language ###
 
-i18n.defaultLocale = "en_US.UTF-8";
-time.timeZone = "Europe/Kaliningrad";
+  i18n.defaultLocale = "en_US.UTF-8";
+  time.timeZone = "Europe/Kaliningrad";
 
-### High Level System ###
+  ### High Level System ###
 
-users.users.${constants.username} = {
-isNormalUser = true;
-extraGroups = [ "wheel" "audio" "video" "input" "docker" ];
-hashedPassword = "!";
-};
+  users.users.${constants.username} = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "audio" "video" "input" "docker" ];
+    hashedPassword = "!";
+  };
 
-### DE/WM
+  ### DE/WM
 
-services.displayManager.ly.enable = true;
+  services.displayManager.ly.enable = true;
 
-programs.niri = {
-enable = true;
-useNautilus = true;
-};
+  programs.niri = {
+    enable = true;
+    useNautilus = true;
+  };
 
-#   programs.sway = {
-#     enable = true;
-#     wrapperFeatures.gtk = true;
-# 
-#     extraPackages = with pkgs; [
-#       wayvnc
-#     ];
-#   };
+  #   programs.sway = {
+  #     enable = true;
+  #     wrapperFeatures.gtk = true;
+  # 
+  #     extraPackages = with pkgs; [
+  #       wayvnc
+  #     ];
+  #   };
 
-xdg.portal = {
-enable = true;
-wlr.enable = true;
-extraPortals = with pkgs; [
-xdg-desktop-portal-gtk
-xdg-desktop-portal-gnome
-gnome-keyring
-];
-};
+  xdg.portal = {
+    enable = true;
+    wlr.enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-gnome
+      gnome-keyring
+    ];
+  };
 
-## Packages
+  ## Packages
 
-environment.systemPackages = with pkgs; [
-wget
-git
-micro
-htop
-bind
-jq
+  environment.systemPackages = with pkgs; [
+    wget
+    git
+    micro
+    htop
+    bind
+    jq
 
-brightnessctl
-pulseaudio
-];
+    brightnessctl
+    pulseaudio
+  ];
 
-system.stateVersion = "25.05";
+  system.stateVersion = "25.05";
 }
 
