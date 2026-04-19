@@ -7,9 +7,9 @@
 		///// LEFT /////
 		////////////////
 
-		"modules-left": [ "sway/workspaces" ],
+		"modules-left": [ "niri/workspaces" ],
 
-		"sway/workspaces": {
+		"niri/workspaces": {
 			"persistent-workspaces": {
 				"1": [], "2": [], "3": [], "4": []
 			},
@@ -36,7 +36,7 @@
 		///// RIGHT /////
 		/////////////////
 
-		"modules-right": [ "backlight", "wireplumber", "battery", "sway/language", "custom/power" ],
+		"modules-right": [ "backlight", "wireplumber", "battery", "niri/language", "custom/power" ],
 
 		"backlight": {
 			"interval": 2,
@@ -57,7 +57,7 @@
 			"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󱟢"],
 		},
 
-		"sway/language": {
+		"niri/language": {
 			"format": "{short} {flag}",
 			"on-click": "swaymsg input type:keyboard xkb_switch_layout next",
 		},

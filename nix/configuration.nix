@@ -28,9 +28,8 @@ in
     enable = true;
   };
 
-  ### Peripherals ###
-
-  services.libinput.touchpad.sendEventsMode = "disabled"; # Disable touchpad
+  services.tuned.enable = true;
+  services.upower.enable = true;
 
   ### Networking ###
 
@@ -82,15 +81,6 @@ in
     enable = true;
     useNautilus = true;
   };
-
-  #   programs.sway = {
-  #     enable = true;
-  #     wrapperFeatures.gtk = true;
-  # 
-  #     extraPackages = with pkgs; [
-  #       wayvnc
-  #     ];
-  #   };
 
   xdg.portal = {
     enable = true;

@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
     };
@@ -18,7 +23,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, vscode-server, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, zen-browser, vscode-server, noctalia, ... }@inputs:
 
     let
       constants = import ./constants.nix { };
@@ -32,6 +37,7 @@
           ./nix/configuration.nix
 
           home-manager.nixosModules.home-manager
+          noctalia
           vscode-server.nixosModules.default
 
           {
