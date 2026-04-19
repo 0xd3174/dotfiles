@@ -18,12 +18,6 @@
     };
   };
 
-  # Notif Daemon
-  services.mako.enable = true;
-  services.mako.settings =
-    {
-      default-timeout = 3000;
-    };
   # Terminal Emulator
   programs.alacritty.enable = true;
   # App Launcher
@@ -41,8 +35,6 @@
     waybar # Status bar
     wl-clipboard # Clipboard
 
-    bluetuith # Bluetooth tui
-
     ### Multimedia ###
 
     nautilus # File manager
@@ -53,11 +45,6 @@
     papers # Document viewer
     kdePackages.ark # File (de)compression
 
-    ### Screenshot ###
-
-    grim # Screenshot for region
-    slurp # Region chooser
-
     ### Code ###
 
     helix # Terminal code editor
@@ -65,7 +52,6 @@
     ### Flexing ###
 
     fastfetch # Fetch backend
-    hyfetch # Fetch lgbt+ styles
     pipes # Screensaver
 
     ### Other ###
