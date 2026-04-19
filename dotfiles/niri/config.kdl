@@ -42,7 +42,7 @@ layout {
     focus-ring {
         width 4
         
-        active-gradient from="#80c8ff" to="#c7ff7f" angle=45
+        active-gradient from="#ebbcba" to="#9ccfd8" angle=45
     }
 
     border {
@@ -54,7 +54,7 @@ layout {
     }
 
     insert-hint {
-    	gradient from="#80c8ff" to="#c7ff7f" angle=45
+    	gradient from="#ebbcba" to="#9ccfd8" angle=45
     }
 }
 
@@ -223,3 +223,6 @@ binds {
     Mod+Shift+E { quit; }
     Ctrl+Alt+Delete { quit; }
 }
+
+include "./noctalia.kdl"
+
