@@ -2,6 +2,8 @@
 
 {
   imports = [
+    ./noctalia.nix
+
     ./apps/syncthing.nix
     ./apps/zoxide.nix
     ./apps/vscode.nix

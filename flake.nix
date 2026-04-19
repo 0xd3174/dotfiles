@@ -37,7 +37,6 @@
           ./nix/configuration.nix
 
           home-manager.nixosModules.home-manager
-          noctalia
           vscode-server.nixosModules.default
 
           {
