@@ -22,7 +22,6 @@
   programs.alacritty.enable = true;
   # App Launcher
   programs.fuzzel.enable = true;
-
   # Screen Recorder
   programs.obs-studio.enable = true;
 
@@ -32,7 +31,6 @@
 
     ### System ###
 
-    waybar # Status bar
     wl-clipboard # Clipboard
 
     ### Multimedia ###
