@@ -14,7 +14,9 @@
     └── flake.nix     - ❤️
 ```
 
-# Shortcuts
+
+
+# Shortcuts [DEPRECATED]
 
 ## Normal mode - ESC
 
