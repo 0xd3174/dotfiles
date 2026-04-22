@@ -68,10 +68,10 @@ in
 
   ### High Level System ###
 
-  users.users.${constants.username} = {
+  users.users.delta = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "input" "docker" ];
-    hashedPassword = "!";
+    hashedPasswordFile = "/etc/nixos/secrets/delta-pass";
   };
 
   ### DE/WM
@@ -102,9 +102,6 @@ in
     htop
     bind
     jq
-
-    brightnessctl
-    pulseaudio
   ];
 
   system.stateVersion = "25.05";
