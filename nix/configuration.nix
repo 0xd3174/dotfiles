@@ -31,6 +31,8 @@ in
   services.tuned.enable = true;
   services.upower.enable = true;
 
+  programs.nix-ld.enable = true;
+
   ### Networking ###
 
   networking.hostName = "${constants.hostname}";
@@ -45,6 +47,10 @@ in
   networking.nftables.enable = true;
 
   services.openssh.enable = true;
+
+  programs.ssh.extraConfig = ''
+    IdentitiesOnly yes # Disable automatic key cycling
+  '';
 
   virtualisation.docker.enable = true;
 
@@ -96,6 +102,8 @@ in
   ## Packages
 
   environment.systemPackages = with pkgs; [
+    xwayland-satellite
+
     wget
     git
     micro

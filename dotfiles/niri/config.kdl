@@ -56,7 +56,27 @@ layout {
 ////////////////
 workspace "browser"
 window-rule {
-    match app-id="zen-beta"
+    match title="Picture-in-Picture" app-id="zen-beta"
+    default-column-width {
+        fixed 560
+    }
+    default-window-height {
+        fixed 310
+    }
+    open-floating true
+}
+window-rule {
+    match title="Library" app-id="zen-beta"
+    default-column-width {
+        fixed 800
+    }
+    default-window-height {
+        fixed 620
+    }
+    open-floating true
+}
+window-rule {
+    match title="Zen Browser" app-id="zen-beta"
     open-on-workspace "browser"
     open-maximized-to-edges true
 }
@@ -86,6 +106,11 @@ window-rule {
     match app-id="org\\.gnome\\..*"
     open-floating true
 }
+window-rule {
+	match app-id="^winboat"
+	open-fullscreen false
+	open-maximized true
+}
 //////////
 prefer-no-csd
 window-rule {
@@ -106,14 +131,17 @@ binds {
     Mod+Space hotkey-overlay-title="Run an App Launcher" {
         spawn "fuzzel"
     }
+    Mod+E hotkey-overlay-title="Run an File Explorer" {
+    	spawn "nautilus"
+    }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" {
         spawn "swaylock"
     }
     XF86AudioRaiseVolume allow-when-locked=true {
-        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"
+        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02+ -l 1.0"
     }
     XF86AudioLowerVolume allow-when-locked=true {
-        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"
+        spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.02-"
     }
     XF86AudioMute allow-when-locked=true {
         spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
@@ -284,16 +312,16 @@ binds {
         center-column
     }
     Mod+Minus {
-        set-column-width "-10%"
-    }
-    Mod+Equal {
-        set-column-width "+10%"
+        set-window-height "+5%"
     }
     Mod+Shift+Minus {
-        set-window-height "-10%"
+        set-window-height "-5%"
+    }
+    Mod+Equal {
+        set-column-width "+5%"
     }
     Mod+Shift+Equal {
-        set-window-height "+10%"
+        set-column-width "-5%"
     }
     Mod+V {
         toggle-window-floating

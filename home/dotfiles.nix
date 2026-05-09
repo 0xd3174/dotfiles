@@ -55,4 +55,9 @@ in
     source = symlink "${dotfiles}/noctalia/";
     recursive = true;
   };
+
+  xdg.configFile."zed" = {
+    source = symlink "${dotfiles}/zed/";
+    recursive = true;
+  };
 }

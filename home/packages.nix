@@ -5,7 +5,7 @@
     ./apps/noctalia.nix
     ./apps/shell.nix
     ./apps/zoxide.nix
-    ./apps/vscode.nix
+    ./apps/zed.nix
     ./apps/syncthing.nix
   ];
 
@@ -16,6 +16,13 @@
 
   # Screen recording software
   programs.obs-studio.enable = true;
+
+  # Direnv
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
+  };
 
   home.packages = with pkgs; [
     #aseprite # Pixel image editor
@@ -49,11 +56,14 @@
     xray
 
     obsidian # Notes
+    xournalpp
 
     kdlfmt
 
     brightnessctl
     pulseaudio
+
+    winboat
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];

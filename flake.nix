@@ -17,13 +17,9 @@
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
     };
-
-    vscode-server = {
-      url = "github:nix-community/nixos-vscode-server";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, vscode-server, noctalia, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, zen-browser, noctalia, ... }@inputs:
 
     let
       constants = import ./constants.nix { };
@@ -37,11 +33,8 @@
           ./nix/configuration.nix
 
           home-manager.nixosModules.home-manager
-          vscode-server.nixosModules.default
 
           {
-            services.vscode-server.enable = true;
-
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
