@@ -64,6 +64,17 @@
     pulseaudio
 
     winboat
+
+    (texlive.combine {
+      inherit (texlive) scheme-medium
+        biblatex biblatex-gost
+        extsizes
+        titlesec
+        tocloft
+        biber;
+    })
+    corefonts # windows-fonts (especially Times New Roman)
+    zotero # reference-manager
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
