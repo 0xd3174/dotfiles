@@ -31,7 +31,8 @@
     "nix": true,
     "rose-pine-theme": true,
     "xcode-themes": true,
-    "oxc": true
+    "oxc": true,
+    "latex": true
   },
   "load_direnv": "shell_hook",
   "lsp": {
