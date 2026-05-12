@@ -1,7 +1,7 @@
 # My gay ass rice
 
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![NixOs]https://img.shields.io/badge/-NixOS-5277C3?logoColor=white&logo=nixos)
+![NixOs](https://img.shields.io/badge/-NixOS-5277C3?logoColor=white&logo=nixos)
 ![Wayland](https://img.shields.io/badge/Wayland-000000?style=for-the-badge&logo=wayland&logoColor=white)
 ![Niri](https://img.shields.io/badge/Niri-gray?style=for-the-badge)
 
