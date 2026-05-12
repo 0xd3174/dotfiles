@@ -71,7 +71,8 @@
         extsizes
         titlesec
         tocloft
-        biber;
+        biber
+        enumitem;
     })
     corefonts # windows-fonts (especially Times New Roman)
     zotero # reference-manager
