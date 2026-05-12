@@ -21,32 +21,3 @@
 
 
 
-# Shortcuts [DEPRECATED]
-
-## Normal mode - ESC
-
-| Shortcut                | Command                       |
-| ----------------------- | ----------------------------- |
-| `Print`                 | Screenshot                    |
-| `Mod + Return`          | Launch terminal               |
-| `Mod + E`               | Launch file explorer          |
-| `Mod + W`               | Kill active window            |
-| `Mod + Shift + Q`       | Exit sway session             |
-| `Mod + F`               | Toggle floating               |
-| `Mod + Shift + F`       | Toggle fulscreen              |
-| `Mod + S`               | Toggle split axis             |
-| `Mod + V`               | Open clipboard history        |
-| `Mod + Shift + R`       | Reload sway                   |
-| `Mod + H/J/K/L`         | Focus window in direction     |
-| `Mod + ←/→/↑/↓`         | Same as ^                     |
-| `Mod + Shift + H/J/K/L` | Move window to direction      |
-| `Mod + Shift + ←/→/↑/↓` | Same as ^                     |
-| `Mod + <n>`             | Move to workspace \<n>        |
-| `Mod + Shift + <n>`     | Move window to workspace \<n> |
-
-## Resize mode - Mod + R
-
-| Shortcut  | Command       |
-| --------- | ------------- |
-| `H/J/K/L` | Resize window |
-| `←/→/↑/↓` | Same as ^     |

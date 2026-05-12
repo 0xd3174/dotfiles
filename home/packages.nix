@@ -31,9 +31,6 @@
 
     wl-clipboard # Clipboard
 
-    brightnessctl
-    pulseaudio # Multimedia support
-
     ##################
     ### Multimedia ###
     ##################

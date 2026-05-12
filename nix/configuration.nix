@@ -104,6 +104,8 @@ in
   environment.systemPackages = with pkgs; [
     xwayland-satellite
 
+    brightnessctl
+
     wget
     git
     micro

@@ -122,19 +122,19 @@ window-rule {
 ///////////
 binds {
     // Mod-?
-    Mod+Shift+Slash {
+    Mod+Shift+Slash hotkey-overlay-title="❓ Help · Hotkey Overlay" {
         show-hotkey-overlay
     }
-    Mod+Return hotkey-overlay-title="Open a Terminal" {
+    Mod+Return hotkey-overlay-title="🧰 Apps · Terminal" {
         spawn "alacritty"
     }
-    Mod+Space hotkey-overlay-title="Run an App Launcher" {
+    Mod+Space hotkey-overlay-title="🧰 Apps · Launcher" {
         spawn "fuzzel"
     }
-    Mod+E hotkey-overlay-title="Run an File Explorer" {
+    Mod+E hotkey-overlay-title="🧰 Apps · File Explorer" {
         spawn "nautilus"
     }
-    Mod+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" {
+    Mod+Alt+L hotkey-overlay-title="🔒 System · Lock Screen" {
         spawn "swaylock"
     }
     XF86AudioRaiseVolume allow-when-locked=true {
@@ -167,63 +167,65 @@ binds {
     XF86MonBrightnessDown allow-when-locked=true {
         spawn "brightnessctl" "--class=backlight" "set" "10%-"
     }
-    Mod+O repeat=false {
+
+    Mod+O repeat=false hotkey-overlay-title="🗂️ Workspace · Overview" {
         toggle-overview
     }
-    Mod+W repeat=false {
+    Mod+W repeat=false hotkey-overlay-title="🪟 Window · Close" {
         close-window
     }
-    Mod+Left {
+    Mod+Left hotkey-overlay-title="🧱 Column · Focus Left" {
         focus-column-left
     }
-    Mod+Down {
+    Mod+Down hotkey-overlay-title="🪟 Window · Focus Down" {
         focus-window-down
     }
-    Mod+Up {
+    Mod+Up hotkey-overlay-title="🪟 Window · Focus Up" {
         focus-window-up
     }
-    Mod+Right {
+    Mod+Right hotkey-overlay-title="🧱 Column · Focus Right" {
         focus-column-right
     }
-    Mod+H {
+    Mod+H hotkey-overlay-title="🧱 Column · Focus Left" {
         focus-column-left
     }
-    Mod+J {
+    Mod+J hotkey-overlay-title="🪟 Window · Focus Down" {
         focus-window-down
     }
-    Mod+K {
+    Mod+K hotkey-overlay-title="🪟 Window · Focus Up" {
         focus-window-up
     }
-    Mod+L {
+    Mod+L hotkey-overlay-title="🧱 Column · Focus Right" {
         focus-column-right
     }
-    Mod+Shift+Left {
+    Mod+Shift+Left hotkey-overlay-title="🧱 Column · Move Left" {
         move-column-left
     }
-    Mod+Shift+Down {
+    Mod+Shift+Down hotkey-overlay-title="🪟 Window · Move Down" {
         move-window-down
     }
-    Mod+Shift+Up {
+    Mod+Shift+Up hotkey-overlay-title="🪟 Window · Move Up" {
         move-window-up
     }
-    Mod+Shift+Right {
+    Mod+Shift+Right hotkey-overlay-title="🧱 Column · Move Right" {
         move-column-right
     }
-    Mod+Shift+H {
+    Mod+Shift+H hotkey-overlay-title="🧱 Column · Move Left" {
         move-column-left
     }
-    Mod+Shift+J {
+    Mod+Shift+J hotkey-overlay-title="🪟 Window · Move Down" {
         move-window-down
     }
-    Mod+Shift+K {
+    Mod+Shift+K hotkey-overlay-title="🪟 Window · Move Up" {
         move-window-up
     }
-    Mod+Shift+L {
+    Mod+Shift+L hotkey-overlay-title="🧱 Column · Move Right" {
         move-column-right
     }
-    Mod+1 {
+    Mod+1 hotkey-overlay-title="🗂️ Workspace · Focus" {
         focus-workspace 1
     }
+
     Mod+2 {
         focus-workspace 2
     }
@@ -248,9 +250,10 @@ binds {
     Mod+9 {
         focus-workspace 9
     }
-    Mod+Shift+1 {
+    Mod+Shift+1 hotkey-overlay-title="🗂️ Workspace · Move Column" {
         move-column-to-workspace 1
     }
+
     Mod+Shift+2 {
         move-column-to-workspace 2
     }
@@ -275,76 +278,78 @@ binds {
     Mod+Ctrl+9 {
         move-column-to-workspace 9
     }
-    Mod+BracketLeft {
+
+
+    Mod+BracketLeft hotkey-overlay-title="🧱 Column · Consume/Expel Left" {
         consume-or-expel-window-left
     }
-    Mod+BracketRight {
+    Mod+BracketRight hotkey-overlay-title="🧱 Column · Consume/Expel Right" {
         consume-or-expel-window-right
     }
-    Mod+Comma {
+    Mod+Comma hotkey-overlay-title="🧱 Column · Consume Window" {
         consume-window-into-column
     }
-    Mod+Period {
+    Mod+Period hotkey-overlay-title="🧱 Column · Expel Window" {
         expel-window-from-column
     }
-    Mod+R {
+    Mod+R hotkey-overlay-title="📐 Layout · Preset Column Width" {
         switch-preset-column-width
     }
-    Mod+Shift+R {
+    Mod+Shift+R hotkey-overlay-title="📐 Layout · Preset Window Height" {
         switch-preset-window-height
     }
-    Mod+Ctrl+R {
+    Mod+Ctrl+R hotkey-overlay-title="📐 Layout · Reset Window Height" {
         reset-window-height
     }
-    Mod+F {
+    Mod+F hotkey-overlay-title="📐 Layout · Maximize Column" {
         maximize-column
     }
-    Mod+Shift+F {
+    Mod+Shift+F hotkey-overlay-title="📐 Layout · Fullscreen" {
         fullscreen-window
     }
-    Mod+Ctrl+F {
+    Mod+Ctrl+F hotkey-overlay-title="📐 Layout · Expand Column" {
         expand-column-to-available-width
     }
-    Mod+M {
+    Mod+M hotkey-overlay-title="📐 Layout · Maximize to Edges" {
         maximize-window-to-edges
     }
-    Mod+C {
+    Mod+C hotkey-overlay-title="📐 Layout · Center Column" {
         center-column
     }
-    Mod+Minus {
+    Mod+Minus hotkey-overlay-title="📐 Layout · Window Height +5%" {
         set-window-height "+5%"
     }
-    Mod+Shift+Minus {
+    Mod+Shift+Minus hotkey-overlay-title="📐 Layout · Window Height -5%" {
         set-window-height "-5%"
     }
-    Mod+Equal {
+    Mod+Equal hotkey-overlay-title="📐 Layout · Column Width +5%" {
         set-column-width "+5%"
     }
-    Mod+Shift+Equal {
+    Mod+Shift+Equal hotkey-overlay-title="📐 Layout · Column Width -5%" {
         set-column-width "-5%"
     }
-    Mod+V {
+    Mod+V hotkey-overlay-title="🪟 Window · Toggle Floating" {
         toggle-window-floating
     }
-    Mod+Shift+V {
+    Mod+Shift+V hotkey-overlay-title="🪟 Window · Focus Floating/Tiling" {
         switch-focus-between-floating-and-tiling
     }
-    Mod+Q {
+    Mod+Q hotkey-overlay-title="📐 Layout · Toggle Tabbed Column" {
         toggle-column-tabbed-display
     }
-    Print {
+    Print hotkey-overlay-title="📸 Screenshot · Area" {
         screenshot
     }
-    Ctrl+Print {
+    Ctrl+Print hotkey-overlay-title="📸 Screenshot · Screen" {
         screenshot-screen
     }
-    Alt+Print {
+    Alt+Print hotkey-overlay-title="📸 Screenshot · Window" {
         screenshot-window
     }
-    Mod+Shift+E {
+    Mod+Shift+E hotkey-overlay-title="⏻ System · Quit Niri" {
         quit
     }
-    Ctrl+Alt+Delete {
+    Ctrl+Alt+Delete hotkey-overlay-title="⏻ System · Quit Niri" {
         quit
     }
 }
