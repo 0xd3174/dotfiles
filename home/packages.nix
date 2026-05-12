@@ -25,13 +25,18 @@
   };
 
   home.packages = with pkgs; [
-    #aseprite # Pixel image editor
-
+    ##############
     ### System ###
+    ##############
 
     wl-clipboard # Clipboard
 
+    brightnessctl
+    pulseaudio # Multimedia support
+
+    ##################
     ### Multimedia ###
+    ##################
 
     nautilus # File manager
     baobab # Disk analyzer
@@ -41,41 +46,40 @@
     papers # Document viewer
     kdePackages.ark # File (de)compression
 
+    ############
     ### Code ###
+    ############
 
     helix # Terminal code editor
 
-    ### Flexing ###
+    ###############
+    ### Larping ###
+    ###############
 
     fastfetch # Fetch backend
     pipes # Screensaver
 
+    #############
     ### Other ###
+    #############
 
-    sing-box # Proxy utility
-    xray
+    #aseprite # Pixel image editor
 
-    obsidian # Notes
-    xournalpp
+    kdlfmt # Formatter for niri
 
-    kdlfmt
+    sing-box
+    xray # Vless compatible proxy utilities
 
-    brightnessctl
-    pulseaudio
+    obsidian
+    xournalpp # Notes
 
-    winboat
+    #######################
+    ### University Slop ###
+    #######################
 
-    (texlive.combine {
-      inherit (texlive) scheme-medium
-        biblatex biblatex-gost
-        extsizes
-        titlesec
-        tocloft
-        biber
-        enumitem;
-    })
-    corefonts # windows-fonts (especially Times New Roman)
-    zotero # reference-manager
+    winboat # Run windows app like native
+
+    zotero # References manager
   ] ++ [
     inputs.zen-browser.packages."${system}".default
   ];
