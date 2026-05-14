@@ -1,8 +1,4 @@
-{ config, lib, pkgs, ... }:
-
-let
-  constants = import ./../constants.nix { };
-in
+{ config, lib, pkgs, constants, ... }:
 
 {
   imports = [
@@ -20,7 +16,7 @@ in
 
   nix.gc.automatic = true;
   nix.gc.dates = "weekly";
-  nix.gc.options = "--delete-older-than 3d";
+  nix.gc.options = "--delete-older-than 7d";
 
   nixpkgs.config.allowUnfree = true;
 
@@ -32,6 +28,14 @@ in
   services.upower.enable = true;
 
   programs.nix-ld.enable = true;
+
+  security.sudo.enable = false;
+  security.doas.enable = true;
+  security.doas.extraRules = [{
+    users = [ "${constants.username}" ];
+    keepEnv = true;
+    persist = true;
+  }];
 
   ### Networking ###
 
@@ -74,10 +78,10 @@ in
 
   ### High Level System ###
 
-  users.users.delta = {
+  users.users.${constants.username} = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "input" "docker" ];
-    hashedPasswordFile = "/etc/nixos/secrets/delta-pass";
+    hashedPasswordFile = "/etc/nixos/secrets/${constants.username}-pass";
   };
 
   ### DE/WM
@@ -101,19 +105,26 @@ in
 
   ## Packages
 
+  programs.git.enable = true;
+  programs.git.config = {
+    safe.directory = "/home/${constants.username}/config";
+  };
+
+  programs.htop.enable = true;
+
   environment.systemPackages = with pkgs; [
+    (pkgs.writeShellScriptBin "sudo" "exec doas \"$@\"")
+
     xwayland-satellite
 
     brightnessctl
 
     wget
-    git
     micro
-    htop
     bind
+    net-tools
     jq
   ];
 
   system.stateVersion = "25.05";
 }
-

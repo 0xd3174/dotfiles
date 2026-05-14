@@ -29,6 +29,8 @@
       nixosConfigurations.${constants.hostname} = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
 
+        specialArgs = { inherit inputs constants; };
+
         modules = [
           ./nix/configuration.nix
 
@@ -43,7 +45,7 @@
 
               backupFileExtension = "backup";
 
-              extraSpecialArgs = { inherit inputs; };
+              extraSpecialArgs = { inherit inputs constants; };
             };
           }
         ];

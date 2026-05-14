@@ -1,8 +1,4 @@
-{ pkgs, ... }:
-
-let
-  constants = import ./../constants.nix { };
-in
+{ pkgs, constants, ... }:
 
 {
   imports = [
@@ -18,7 +14,6 @@ in
     name = "Adwaita";
 
     package = pkgs.adwaita-icon-theme;
-    size = 24; # This doesn't make any fucking sense bcz of sway config
   };
 
   home.stateVersion = "25.05";
