@@ -1,11 +1,12 @@
-# My gay ass rice
-
+# ❄️ NixOS Dotfiles
 ![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 ![NixOS](https://img.shields.io/badge/NixOS-5277C3?style=for-the-badge&logo=nixos&logoColor=white)
 ![Wayland](https://img.shields.io/badge/Wayland-000000?style=for-the-badge&logo=wayland&logoColor=white)
 ![Niri](https://img.shields.io/badge/Niri-gray?style=for-the-badge)
 
 ![View of desktop](https://github.com/0xd3174/dotfiles/blob/master/assets/desktop.png)
+
+## 📂 Project Structure
 
 ```
 .
@@ -19,5 +20,23 @@
     └── flake.nix     - ❤️
 ```
 
+## 🚀 Setup and Usage
 
+### 1. Hardware Config
 
+- Replace `nix/hardware.nix` with your system's `/etc/nixos/hardware-configuration.nix`.
+- Update `constants.nix` with your own `hostname` and `username`.
+
+### 2. Set Password
+
+```bash
+sudo mkdir -p /etc/nixos/secrets
+mkpasswd -m sha-512 | sudo tee /etc/nixos/secrets/YOUR-USERNAME-pass > /dev/null
+sudo chmod 600 /etc/nixos/secrets/delta-pass
+```
+
+### 3. Build & Apply
+
+```bash
+sudo nixos-rebuild switch --flake .#YOUR-HOSTNAME
+```

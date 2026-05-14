@@ -3,7 +3,7 @@
     "dock": "right",
   },
   "agent": {
-    "default_profile": "ask",
+    "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
       "model": "gemini-3.1-pro-preview",
