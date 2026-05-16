@@ -6,8 +6,8 @@
     "default_profile": "write",
     "default_model": {
       "provider": "copilot_chat",
-      "model": "gemini-3.1-pro-preview",
-      "enable_thinking": true,
+      "model": "gpt-5.2-codex",
+      "enable_thinking": false,
       "effort": "high",
     },
     "favorite_models": [],

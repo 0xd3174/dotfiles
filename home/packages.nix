@@ -18,8 +18,8 @@
   programs.obs-studio.enable = true;
 
   # Direnv
+  programs.direnv.enable = true;
   programs.direnv = {
-    enable = true;
     enableBashIntegration = true;
     nix-direnv.enable = true;
   };
@@ -77,7 +77,9 @@
     winboat # Run windows app like native
 
     zotero # References manager
+
+    bitwarden-desktop
   ] ++ [
-    inputs.zen-browser.packages."${system}".default
+    inputs.zen-browser.packages."${pkgs.system}".default
   ];
 }

@@ -6,7 +6,9 @@
     ./hardware.nix
   ];
 
+  ########################
   ### Low Level System ###
+  ########################
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.efiSysMountPoint = "/boot/efi";
@@ -37,7 +39,9 @@
     persist = true;
   }];
 
+  ##################
   ### Networking ###
+  ##################
 
   networking.hostName = "${constants.hostname}";
 
@@ -52,13 +56,11 @@
 
   services.openssh.enable = true;
 
-  programs.ssh.extraConfig = ''
-    IdentitiesOnly yes # Disable automatic key cycling
-  '';
-
   virtualisation.docker.enable = true;
 
+  ##############
   ### Sounds ###
+  ##############
 
   security.rtkit.enable = true;
 
@@ -71,12 +73,16 @@
 
   hardware.bluetooth.enable = true;
 
+  ################
   ### Language ###
+  ################
 
   i18n.defaultLocale = "en_US.UTF-8";
   time.timeZone = "Europe/Kaliningrad";
 
+  #########################
   ### High Level System ###
+  #########################
 
   users.users.${constants.username} = {
     isNormalUser = true;
@@ -84,7 +90,9 @@
     hashedPasswordFile = "/etc/nixos/secrets/${constants.username}-pass";
   };
 
-  ### DE/WM
+  #############
+  ### DE/WM ###
+  #############
 
   services.displayManager.ly.enable = true;
 
@@ -99,11 +107,12 @@
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
       xdg-desktop-portal-gnome
-      gnome-keyring
     ];
   };
 
-  ## Packages
+  ################
+  ### Packages ###
+  ################
 
   programs.git.enable = true;
   programs.git.config = {
