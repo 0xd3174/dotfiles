@@ -78,7 +78,9 @@
 
     zotero # References manager
 
-    bitwarden-desktop
+    bitwarden-desktop # Password manager
+
+    tldr # Man for dummies
   ] ++ [
     inputs.zen-browser.packages."${pkgs.system}".default
   ];

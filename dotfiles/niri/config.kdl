@@ -76,10 +76,6 @@ window-rule {
     open-floating true
 }
 window-rule {
-    match title="Generate Password" app-id="org.keepassxc.KeePassXC"
-		open-floating true
-}
-window-rule {
     match title="Zen Browser" app-id="zen-beta"
     open-on-workspace "browser"
     open-maximized-to-edges true
