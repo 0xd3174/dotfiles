@@ -29,14 +29,18 @@
 
 ### 2. Set Password
 
-```bash
-sudo mkdir -p /etc/nixos/secrets
-mkpasswd -m sha-512 | sudo tee /etc/nixos/secrets/YOUR-USERNAME-pass > /dev/null
-sudo chmod 600 /etc/nixos/secrets/delta-pass
+```sh
+sudo mkdir -p /etc/secrets
+mkpasswd -m sha-512 | sudo tee /etc/secrets/<USERNAME>-pass > /dev/null
+sudo chmod 600 /etc/secrets/<USERNAME>-pass
 ```
 
-### 3. Build & Apply
+### 3. Mihomo Config
+
+`mihomo` uses `/etc/secrets/config.yaml` as its config path.
+
+### 4. Build & Apply
 
 ```bash
-sudo nixos-rebuild switch --flake .#YOUR-HOSTNAME
+sudo nixos-rebuild switch --flake .#<USERNAME>
 ```

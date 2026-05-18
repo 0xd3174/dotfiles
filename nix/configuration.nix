@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ./undervolt.nix
     ./hardware.nix
+    ./undervolt.nix
+    ./mihomo.nix
   ];
 
   ########################
@@ -49,7 +50,7 @@
   networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
   networking.firewall.checkReversePath = "loose";
-  networking.firewall.trustedInterfaces = [ "tun0" ]; # sing-box tun
+  networking.firewall.trustedInterfaces = [ "utun0" "tun0" ]; # sing-box tun
 
   networking.firewall.allowedTCPPorts = [ 5173 ]; # vite --host
   networking.nftables.enable = true;
@@ -87,7 +88,7 @@
   users.users.${constants.username} = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "input" "docker" ];
-    hashedPasswordFile = "/etc/nixos/secrets/${constants.username}-pass";
+    hashedPasswordFile = "/etc/secrets/${constants.username}-pass";
   };
 
   #############

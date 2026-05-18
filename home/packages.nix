@@ -65,7 +65,8 @@
     kdlfmt # Formatter for niri
 
     sing-box
-    xray # Vless compatible proxy utilities
+    xray
+    mihomo # Vless compatible proxy utilities
 
     obsidian
     xournalpp # Notes
@@ -80,7 +81,7 @@
 
     bitwarden-desktop # Password manager
 
-    tldr # Man for dummies
+    tlrc # Man for dummies
   ] ++ [
     inputs.zen-browser.packages."${pkgs.system}".default
   ];
