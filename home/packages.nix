@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs, constants, ... }:
 
 {
   imports = [
@@ -22,6 +22,11 @@
   programs.direnv = {
     enableBashIntegration = true;
     nix-direnv.enable = true;
+  };
+
+  # Bitwarden SSH-Agent support
+  home.sessionVariables = {
+    SSH_AUTH_SOCK = "/home/${constants.username}/.bitwarden-ssh-agent.sock";
   };
 
   home.packages = with pkgs; [

@@ -80,6 +80,10 @@ window-rule {
     open-on-workspace "browser"
     open-maximized-to-edges true
 }
+window-rule {
+    match title="Extension: (Bitwarden Password Manager) - Bitwarden — Zen Browser" app-id="zen-beta"
+    open-floating true
+}
 //////////
 // MISC //
 //////////
