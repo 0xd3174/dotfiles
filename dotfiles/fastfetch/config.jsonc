@@ -1,71 +1,85 @@
 {
-	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
-	"logo": {
-		"type": "small",
-		"padding": {
-			"top": 2,
-			"left": 3
-		}
-	},
-	"display": {
-		"color": {
-			"keys": "green",
-			"output": "white"
-		},
-		"size": {
-			"binaryPrefix": "si"
-		},
-		"separator": "  ",
-		"key": {
-			"type": "icon"
-		}
-	},
-	"modules": [
-		{
-			"type": "title",
-			"format": "  {1} {#34} {2}",
-			"outputColor": "cyan"
-		},
-		"break",
-		{
-			"type": "os",
-			"format": "{name}",
-			"keyIcon": ""
-		},
-		{
-			"type": "packages",
-			"format": "{}"
-		},
-		"shell",
-		{
-			"type": "terminal",
-			"keyIcon": ""
-		},
-		"wm",
-		{
-			"type": "cursor",
-			"format": "{}"
-		},
-		"terminalfont",
-		"uptime",
-		{
-			"type": "datetime",
-			"format": "{1}-{3}-{11} ({weekday})"
-		},
-		{
-			"type": "media",
-			"format": "{}"
-		},
-		{
-			"type": "player",
-			"format": "{}"
-		},
-		"break",
-		{
-			"type": "custom",
-			"format": "{#90}  {#31}  {#32}  {#33}  {#34}  {#35}  {#36}  {#37} "
-		},
-		"break",
-		"break"
-	]
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "display": {
+    "key": {
+      "width": 10,
+    },
+    "separator": "",
+  },
+  "logo": {
+    "type": "small",
+    "padding": {
+      "top": 2,
+      "left": 3,
+    },
+  },
+  "modules": [
+    "break",
+    {
+      "type": "command",
+      "key": "󰀄 USER",
+      "keyColor": "#ccccff",
+      "text": "echo $USER@$(hostnamectl hostname)",
+    },
+    {
+      "type": "os",
+      "key": "󱄅 OS",
+      "keyColor": "#c9cfff",
+      "format": "{name} {version-id}",
+    },
+    {
+      "type": "command",
+      "key": "󰌽 KER",
+      "keyColor": "#c6d2ff",
+      "text": "echo $(uname -r | cut -d- -f1) $(uname -m)",
+    },
+    {
+      "type": "packages",
+      "key": "󰏗 PKG",
+      "keyColor": "#c4d4ff",
+      "format": "{all}",
+    },
+    {
+      "type": "terminal",
+      "key": "󰆍 TERM",
+      "keyColor": "#c1d7ff",
+      "format": "{pretty-name}",
+    },
+    {
+      "type": "shell",
+      "key": "󰞷 SH",
+      "keyColor": "#c0d9ff",
+      "format": "{pretty-name}",
+    },
+    {
+      "type": "uptime",
+      "keyColor": "#bedcff",
+      "key": "󰥔 UP",
+    },
+    {
+      "type": "memory",
+      "key": "󰍛 RAM",
+      "keyColor": "#bddeff",
+      "format": "{used} / {total} ({percentage})",
+    },
+    {
+      "type": "disk",
+      "folders": "/",
+      "key": "󰋊 SSD",
+      "keyColor": "#bde0fe",
+      "format": "{size-used} / {size-total} ({size-percentage})",
+    },
+    {
+      "type": "media",
+      "key": "󰽴 MP4",
+      "keyColor": "#bddeff",
+      "format": "{artist} - {title}",
+    },
+    "break",
+    {
+      "type": "custom",
+      "format": "\u001b[90m \u001b[91m \u001b[92m \u001b[93m \u001b[94m \u001b[95m \u001b[96m \u001b[97m",
+    },
+    "break",
+  ],
 }
