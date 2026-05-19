@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 let
   dotfiles = "${config.home.homeDirectory}/config/dotfiles";
@@ -58,6 +58,14 @@ in
 
   xdg.configFile."zed" = {
     source = symlink "${dotfiles}/zed/";
+    recursive = true;
+  };
+
+  home.sessionVariables = {
+    STARSHIP_CONFIG = lib.mkForce "$HOME/.config/starship/starship.toml";
+  };
+  xdg.configFile."starship" = {
+    source = symlink "${dotfiles}/starship/";
     recursive = true;
   };
 }

@@ -6,3 +6,6 @@ size = 11.25
 
 [window]
 decorations = "none"
+
+[window.padding]
+x = 12

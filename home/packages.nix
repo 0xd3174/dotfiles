@@ -24,6 +24,12 @@
     nix-direnv.enable = true;
   };
 
+  # Bash prompt
+  programs.starship.enable = true;
+  programs.starship = {
+    enableBashIntegration = true;
+  };
+
   # Bitwarden SSH-Agent support
   home.sessionVariables = {
     SSH_AUTH_SOCK = "/home/${constants.username}/.bitwarden-ssh-agent.sock";
@@ -69,8 +75,6 @@
 
     kdlfmt # Formatter for niri
 
-    sing-box
-    xray
     mihomo # Vless compatible proxy utilities
 
     obsidian
