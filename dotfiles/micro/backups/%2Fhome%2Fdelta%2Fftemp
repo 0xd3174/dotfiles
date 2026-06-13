@@ -1,0 +1,7 @@
+root@OpenWrt:~# cat /var/lib/beszel-agent/fingerprint
+4707a8bdada9cf6f707665c380d68393393e7176926d042d
+
+root@OpenWrt:~# cat /var/lib/beszel-agent/fingerprint
+2d90bc7c730119b092d7e18735708445c8469d5b6436cf94
+
+

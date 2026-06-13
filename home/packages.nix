@@ -1,39 +1,7 @@
 { inputs, pkgs, constants, ... }:
 
 {
-  imports = [
-    ./apps/noctalia.nix
-    ./apps/shell.nix
-    ./apps/zoxide.nix
-    ./apps/zed.nix
-    ./apps/syncthing.nix
-  ];
 
-  # Terminal Emulator
-  programs.alacritty.enable = true;
-  # App Launcher
-  programs.fuzzel.enable = true;
-
-  # Screen recording software
-  programs.obs-studio.enable = true;
-
-  # Direnv
-  programs.direnv.enable = true;
-  programs.direnv = {
-    enableBashIntegration = true;
-    nix-direnv.enable = true;
-  };
-
-  # Bash prompt
-  programs.starship.enable = true;
-  programs.starship = {
-    enableBashIntegration = true;
-  };
-
-  # Bitwarden SSH-Agent support
-  home.sessionVariables = {
-    SSH_AUTH_SOCK = "/home/${constants.username}/.bitwarden-ssh-agent.sock";
-  };
 
   home.packages = with pkgs; [
     ##############
@@ -52,7 +20,6 @@
     decibels # Audio files
     showtime # Video player
     papers # Document viewer
-    kdePackages.ark # File (de)compression
 
     ############
     ### Code ###
@@ -77,6 +44,7 @@
 
     mihomo # Vless compatible proxy utilities
 
+    brave-origin
     obsidian
     xournalpp # Notes
 
@@ -88,9 +56,11 @@
 
     zotero # References manager
 
-    bitwarden-desktop # Password manager
-
     tlrc # Man for dummies
+
+    restic # Backup utility
+
+    antigravity-cli
   ] ++ [
     inputs.zen-browser.packages."${pkgs.system}".default
   ];

@@ -16,7 +16,8 @@
     ├── dotfiles/     - .config mostly files
     ├── home/         - home manager config
     ├── nix/          - nixos config
-    ├── constans.nix  - username, hostname, etc...
+    ├── overlays/     - nixpkgs overlays (only .nix files!)
+    ├── constants.nix - username, hostname, etc...
     └── flake.nix     - ❤️
 ```
 
@@ -30,9 +31,9 @@
 ### 2. Set Password
 
 ```sh
-sudo mkdir -p /etc/secrets
-mkpasswd -m sha-512 | sudo tee /etc/secrets/<USERNAME>-pass > /dev/null
-sudo chmod 600 /etc/secrets/<USERNAME>-pass
+doas mkdir -p /etc/secrets
+mkpasswd -m sha-512 | doas tee /etc/secrets/<USERNAME>-pass > /dev/null
+doas chmod 600 /etc/secrets/<USERNAME>-pass
 ```
 
 ### 3. Mihomo Config
@@ -42,5 +43,5 @@ sudo chmod 600 /etc/secrets/<USERNAME>-pass
 ### 4. Build & Apply
 
 ```bash
-sudo nixos-rebuild switch --flake .#<USERNAME>
+doas nixos-rebuild switch --flake .#<HOSTNAME>
 ```

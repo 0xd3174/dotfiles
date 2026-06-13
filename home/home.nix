@@ -5,6 +5,19 @@
     ./dotfiles.nix
     ./packages.nix
     ./fonts.nix
+
+    # Apps
+    ./apps/alacritty.nix
+    ./apps/bitwarden.nix
+    ./apps/direnv.nix
+    ./apps/fuzzel.nix
+    ./apps/noctalia.nix
+    ./apps/obs.nix
+    ./apps/shell.nix
+    ./apps/starship.nix
+    ./apps/syncthing.nix
+    ./apps/zed.nix
+    ./apps/zoxide.nix
   ];
 
   home.username = "${constants.username}";

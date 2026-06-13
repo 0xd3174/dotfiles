@@ -1,4 +1,5 @@
 "$schema" = 'https://starship.rs/config-schema.json'
+palette = "rose-pine"
 
 format = """
 [░▒▓](#ebbcba)\
@@ -70,3 +71,42 @@ disabled = false
 time_format = "%R" # Hour:Minute Format
 style = "bg:#21202e"
 format = '[[  $time ](fg:#908caa bg:#21202e)]($style)'
+
+[palettes.rose-pine]
+# Standard colors
+blue      = "#9ccfd8"
+red       = "#eb6f92"
+green     = "#31748f"
+yellow    = "#f6c177"
+cyan      = "#ebbcba"
+magenta   = "#c4a7e7"
+white     = "#e0def4"
+black     = "#26233a"
+
+# Extended palette (Catppuccin-compatible names)
+rosewater = "#f6c177"
+flamingo  = "#eb6f92"
+pink      = "#c4a7e7"
+mauve     = "#c4a7e7"
+maroon    = "#eb6f92"
+peach     = "#f6c177"
+teal      = "#ebbcba"
+sky       = "#ebbcba"
+sapphire  = "#9ccfd8"
+lavender  = "#c4a7e7"
+
+# Text shades
+text      = "#e0def4"
+subtext1  = "#e0def4"
+subtext0  = "#6e6a86"
+
+# Surface shades
+overlay2  = "#6e6a86"
+overlay1  = "#6e6a86"
+overlay0  = "#26233a"
+surface2  = "#26233a"
+surface1  = "#26233a"
+surface0  = "#191724"
+base      = "#191724"
+mantle    = "#191724"
+crust     = "#191724"

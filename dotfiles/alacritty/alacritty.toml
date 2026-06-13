@@ -1,5 +1,5 @@
 [general]
-import = [ "./theme-rosepine.toml" ]
+import = [ "./themes/rose-pine.toml" ]
 
 [font]
 size = 11.25

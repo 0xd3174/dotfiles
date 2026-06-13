@@ -22,10 +22,11 @@
   nix.gc.options = "--delete-older-than 7d";
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
+  ];
 
-  security.polkit = {
-    enable = true;
-  };
+  security.polkit.enable = true;
 
   services.tuned.enable = true;
   services.upower.enable = true;
@@ -36,8 +37,8 @@
   security.doas.enable = true;
   security.doas.extraRules = [{
     users = [ "${constants.username}" ];
-    keepEnv = true;
     persist = true;
+    setEnv = [ "PATH" "NIX_PATH" "HOME" ];
   }];
 
   ##################
@@ -50,13 +51,14 @@
   networking.nameservers = [ "1.1.1.1" "8.8.8.8" ];
 
   networking.firewall.checkReversePath = "loose";
-  networking.firewall.trustedInterfaces = [ "utun0" "tun0" ]; # sing-box tun
+  networking.firewall.trustedInterfaces = [ "utun0" "tun0" ]; # tun interfaces
 
-  networking.firewall.allowedTCPPorts = [ 5173 ]; # vite --host
   networking.nftables.enable = true;
 
-  services.openssh.enable = true;
-
+  services.openssh = {
+    enable = true;
+    settings.PermitRootLogin = "no";
+  };
   virtualisation.docker.enable = true;
 
   ##############
@@ -99,7 +101,6 @@
 
   programs.niri = {
     enable = true;
-    useNautilus = true;
   };
 
   xdg.portal = {
