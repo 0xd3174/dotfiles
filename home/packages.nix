@@ -60,8 +60,10 @@
 
     restic # Backup utility
 
-    antigravity-cli
+    antigravity-cli # Gemini AI CLI
+
+    onlyoffice-desktopeditors # Office suite
   ] ++ [
-    inputs.zen-browser.packages."${pkgs.system}".default
+    # inputs.zen-browser.packages."${pkgs.system}".default
   ];
 }
