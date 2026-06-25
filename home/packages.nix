@@ -8,8 +8,6 @@
     ### System ###
     ##############
 
-    wl-clipboard # Clipboard
-
     ##################
     ### Multimedia ###
     ##################
@@ -44,15 +42,15 @@
 
     mihomo # Vless compatible proxy utilities
 
-    brave-origin
-    obsidian
-    xournalpp # Notes
+    brave-origin # Browser
+    obsidian # MD Notes
+    xournalpp # Handwritten Notes
 
     #######################
     ### University Slop ###
     #######################
 
-    winboat # Run windows app like native
+    #winboat # Run windows app like native
 
     zotero # References manager
 

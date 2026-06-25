@@ -35,7 +35,6 @@
     "nix": true,
     "typst": true,
     "rose-pine-theme": true,
-    "oxc": true,
     "svelte": true,
   },
   "load_direnv": "shell_hook",
@@ -55,52 +54,22 @@
       },
       "enable_lsp_tasks": true,
     },
-    "oxlint": {
-      "initialization_options": {
-        "settings": {
-          "configPath": null,
-          "run": "onType",
-          "disableNestedConfig": false,
-          "fixKind": "safe_fix",
-          "unusedDisableDirectives": "deny",
-        },
-      },
-    },
-    "oxfmt": {
-      "initialization_options": {
-        "settings": {
-          "fmt.configPath": null,
-          "run": "onSave",
-        },
-      },
-    },
   },
   "languages": {
     "TypeScript": {
-      "format_on_save": "on",
+      "format_on_save": "off",
       "prettier": {
         "allowed": false,
       },
-      "formatter": [
-        {
-          "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
     },
     "JSON": {
-      "format_on_save": "on",
+      "format_on_save": "off",
       "prettier": {
         "allowed": false,
       },
-      "formatter": [
-        {
-          "language_server": {
-            "name": "oxfmt",
-          },
-        },
-      ],
+    },
+    "Svelte": {
+      "format_on_save": "off",
     },
   },
   "soft_wrap": "bounded",
