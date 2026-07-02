@@ -36,6 +36,7 @@
     "typst": true,
     "rose-pine-theme": true,
     "svelte": true,
+    "nim": true
   },
   "load_direnv": "shell_hook",
   "lsp": {

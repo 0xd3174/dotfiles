@@ -134,6 +134,10 @@
     bind
     net-tools
     jq
+
+    nim
+    nimble
+    nimlangserver
   ];
 
   system.stateVersion = "25.05";
