@@ -43,6 +43,7 @@
     mihomo # Vless compatible proxy utilities
 
     brave-origin # Browser
+    inputs.helium-browser.packages.${pkgs.system}.default # Browser
     obsidian # MD Notes
     xournalpp # Handwritten Notes
 
@@ -61,7 +62,5 @@
     antigravity-cli # Gemini AI CLI
 
     onlyoffice-desktopeditors # Office suite
-  ] ++ [
-    # inputs.zen-browser.packages."${pkgs.system}".default
   ];
 }

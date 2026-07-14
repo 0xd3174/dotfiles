@@ -30,13 +30,8 @@
     "dark": "Rose Pine Dark",
   },
   "auto_install_extensions": {
-    "docker-compose": true,
-    "dockerfile": true,
     "nix": true,
-    "typst": true,
     "rose-pine-theme": true,
-    "svelte": true,
-    "nim": true
   },
   "load_direnv": "shell_hook",
   "lsp": {
