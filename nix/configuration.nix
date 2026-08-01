@@ -90,6 +90,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "input" "docker" ];
     hashedPasswordFile = "/etc/secrets/${constants.username}-pass";
+    shell = pkgs.fish;
   };
 
   #############
@@ -121,6 +122,7 @@
   };
 
   programs.htop.enable = true;
+  programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
     (pkgs.writeShellScriptBin "sudo" "exec doas \"$@\"")

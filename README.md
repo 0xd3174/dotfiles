@@ -42,6 +42,6 @@ doas chmod 600 /etc/secrets/<USERNAME>-pass
 
 ### 4. Build & Apply
 
-```bash
+```fish
 doas nixos-rebuild switch --flake .#<HOSTNAME>
 ```

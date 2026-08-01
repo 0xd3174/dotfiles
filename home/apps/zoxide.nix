@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.bash = {
+  programs.fish = {
     shellAliases = {
       cd = "z";
     };
@@ -9,6 +9,6 @@
 
   programs.zoxide = {
     enable = true;
-    enableBashIntegration = true;
+    enableFishIntegration = true;
   };
 }

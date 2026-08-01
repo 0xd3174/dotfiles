@@ -32,41 +32,8 @@
   "auto_install_extensions": {
     "nix": true,
     "rose-pine-theme": true,
+    "kotlin": true,
   },
   "load_direnv": "shell_hook",
-  "lsp": {
-    "vtsls": {
-      "settings": {
-        "typescript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always",
-          },
-        },
-        "javascript": {
-          "updateImportsOnFileMove": {
-            "enabled": "always",
-          },
-        },
-      },
-      "enable_lsp_tasks": true,
-    },
-  },
-  "languages": {
-    "TypeScript": {
-      "format_on_save": "off",
-      "prettier": {
-        "allowed": false,
-      },
-    },
-    "JSON": {
-      "format_on_save": "off",
-      "prettier": {
-        "allowed": false,
-      },
-    },
-    "Svelte": {
-      "format_on_save": "off",
-    },
-  },
   "soft_wrap": "bounded",
 }

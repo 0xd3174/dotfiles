@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.bash = {
+  programs.fish = {
     enable = true;
 
     shellAliases = {
