@@ -18,6 +18,7 @@
     decibels # Audio files
     showtime # Video player
     papers # Document viewer
+    photocraft # Clean-room Photoshop reimplementation
 
     ############
     ### Code ###
@@ -59,8 +60,8 @@
 
     restic # Backup utility
 
-    antigravity-cli # Gemini AI CLI
-
     onlyoffice-desktopeditors # Office suite
+
+    claude-code
   ];
 }

@@ -2,3 +2,5 @@
 .agents
 *.pass
 *.secret
+dotfiles/micro/backups/
+dotfiles/micro/buffers/

@@ -36,4 +36,17 @@
   },
   "load_direnv": "shell_hook",
   "soft_wrap": "bounded",
+  "languages": {
+    "Nimony": {
+      "language_servers": ["nimony-lsp"],
+      "format_on_save": "on"
+    }
+  },
+  "lsp": {
+    "nimony-lsp": {
+      "binary": {
+        "path": "/home/delta/code/nimony-lsp/target/release/nimony-lsp"
+      }
+    }
+  }
 }

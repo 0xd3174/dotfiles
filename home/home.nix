@@ -7,10 +7,9 @@
     ./fonts.nix
 
     # Apps
-    ./apps/alacritty.nix
+    ./apps/foot.nix
     ./apps/bitwarden.nix
     ./apps/direnv.nix
-    ./apps/fuzzel.nix
     ./apps/noctalia.nix
     ./apps/obs.nix
     ./apps/shell.nix
@@ -18,6 +17,7 @@
     ./apps/syncthing.nix
     ./apps/zed.nix
     ./apps/zoxide.nix
+    ./apps/dsh.nix
   ];
 
   home.username = "${constants.username}";

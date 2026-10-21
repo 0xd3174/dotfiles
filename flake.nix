@@ -17,14 +17,13 @@
       url = "github:noctalia-dev/noctalia/cachix";
     };
 
-
-    nixpkgs-patch-brave-origin = {
-      url = "https://github.com/NixOS/nixpkgs/pull/513143.diff";
-      flake = false;
-    };
-
     helium-browser = {
       url = "github:schembriaiden/helium-browser-nix-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    dsh-nix = {
+      url = "github:Samuka007/dsh-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -66,5 +65,13 @@
       };
 
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+
+      devShells.x86_64-linux.default = nixpkgs.legacyPackages.x86_64-linux.mkShell {
+        packages = with nixpkgs.legacyPackages.x86_64-linux; [
+          git
+          nixpkgs-fmt
+        ];
+      };
     };
 }
+

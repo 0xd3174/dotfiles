@@ -52,6 +52,8 @@ layout {
 ////////////////
 workspace "browser"
 window-rule {
+    match title="^Picture-in-Picture$"
+    match title="^Картинка в картинке$"
     match title="Picture-in-Picture" app-id="zen-beta"
     default-column-width {
         fixed 560
@@ -62,6 +64,8 @@ window-rule {
     open-floating true
 }
 window-rule {
+    match title="^Library$"
+    match title="^Библиотека$"
     match title="Library" app-id="zen-beta"
     default-column-width {
         fixed 800
@@ -77,7 +81,30 @@ window-rule {
     open-maximized-to-edges true
 }
 window-rule {
-    match title="Extension: (Bitwarden Password Manager) - Bitwarden — Zen Browser" app-id="zen-beta"
+    // Bitwarden browser extension & desktop app
+    match app-id=r#"^(?i)bitwarden"#
+    match title=r#"^Extension: \(.*Bitwarden.*\)"#
+    match title=r#"^Bitwarden( - Free Password Manager)?$"#
+    open-floating true
+}
+window-rule {
+    // File pickers, portals & authentication dialogs
+    match title=r#"^(Open|Save|Choose|Select) (File|Files|Folder|Directory)"#
+    match title=r#"^(Открыть|Сохранить|Выбор|Выбрать) (файл|файлы|папку|директорию)"#
+    match title=r#"^File Upload"#
+    match title=r#"^Save As"#
+    match title=r#"^Сохранить как"#
+    match app-id=r#"xdg-desktop-portal"#
+    match app-id=r#"polkit"#
+    match app-id=r#"pinentry"#
+    match app-id=r#"gcr-prompter"#
+    open-floating true
+}
+window-rule {
+    // Audio, bluetooth and network applets
+    match app-id=r#"pavucontrol"#
+    match app-id=r#"blueman-manager"#
+    match app-id=r#"nm-connection-editor"#
     open-floating true
 }
 //////////
@@ -130,7 +157,7 @@ binds {
         show-hotkey-overlay
     }
     Mod+Return hotkey-overlay-title="🧰 Apps · Terminal" {
-        spawn "alacritty"
+        spawn "foot"
     }
     Mod+Space hotkey-overlay-title="🧰 Apps · Launcher" {
         spawn "noctalia" "msg" "panel-toggle" "launcher"

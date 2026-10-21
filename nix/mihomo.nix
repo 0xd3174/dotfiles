@@ -5,14 +5,15 @@
     wants = [ "network-online.target" ];
     after = [ "network-online.target" ];
 
+
     serviceConfig = {
       Type = "simple";
 
       LimitNPROC = 500;
       LimitNOFILE = 1000000;
 
-      CapabilityBoundingSet = "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE";
-      AmbientCapabilities = "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE";
+      CapabilityBoundingSet = "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_DAC_READ_SEARCH CAP_DAC_OVERRIDE";
+      AmbientCapabilities = "CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE CAP_DAC_READ_SEARCH CAP_DAC_OVERRIDE";
 
       Restart = "always";
       RestartSec = 1;
