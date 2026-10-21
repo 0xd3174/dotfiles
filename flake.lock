@@ -3,17 +3,17 @@
     "dsh": {
       "flake": false,
       "locked": {
-        "lastModified": 1786621126,
-        "narHash": "sha256-ZPGCNoPXVjP76Tm/tFPDX2X95cd83M4iHLmVP5dR+Ps=",
+        "lastModified": 1792221763,
+        "narHash": "sha256-WcPs3q4NFTRnH2y1Rc/o7/rvJAOe8s7isoTQYf8APFU=",
         "owner": "deepseek-ai",
         "repo": "deepseek-harness",
-        "rev": "47f943859bef60e4160492346772ded9b24f765a",
+        "rev": "687f282e8625c6b8d11ff58211a90524be2e4317",
         "type": "github"
       },
       "original": {
         "owner": "deepseek-ai",
         "repo": "deepseek-harness",
-        "rev": "47f943859bef60e4160492346772ded9b24f765a",
+        "rev": "687f282e8625c6b8d11ff58211a90524be2e4317",
         "type": "github"
       }
     },
@@ -25,15 +25,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1786765095,
-        "narHash": "sha256-RmXoxPMi30noeZHDcLNduLhf3iCElPVZKirs3OjT4Qs=",
-        "owner": "Samuka007",
+        "lastModified": 1792599888,
+        "narHash": "sha256-sWnXwZT8vs2/InB4I16yHrGjjm/L83yphrOYjsm/UFQ=",
+        "owner": "0xd3174",
         "repo": "dsh-nix",
-        "rev": "090ed51b27e65af7c0aadf64dcd7b208030aa3a9",
+        "rev": "9ddc3952a56f22457757728e7e3162214d8c8774",
         "type": "github"
       },
       "original": {
-        "owner": "Samuka007",
+        "owner": "0xd3174",
         "repo": "dsh-nix",
         "type": "github"
       }

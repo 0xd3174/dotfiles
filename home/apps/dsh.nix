@@ -1,15 +1,5 @@
-{ inputs, pkgs, ... }:
+{ config, inputs, pkgs, ... }:
 
-let
-  dshWithTimeout = inputs.dsh-nix.packages.${pkgs.system}.dsh.override {
-    fetchPnpmDeps = args: pkgs.fetchPnpmDeps (args // {
-      pnpmInstallFlags = [
-        "--fetch-timeout=600000"
-        "--fetch-retries=10"
-      ];
-    });
-  };
-in
 {
   imports = [
     inputs.dsh-nix.homeManagerModules.dsh
@@ -18,7 +8,7 @@ in
   programs.dsh = {
     enable = true;
 
-    package = dshWithTimeout;
+    package = inputs.dsh-nix.packages.${pkgs.system}.dsh;
 
     homePatchesFile = ./cordis.patch.yml;
 
@@ -45,7 +35,7 @@ in
       After = [ "network.target" ];
     };
     Service = {
-      ExecStart = "${dshWithTimeout}/bin/dsh web --port 3080";
+      ExecStart = "${config.programs.dsh.package}/bin/dsh web --port 3080 --no-open";
       Restart = "on-failure";
     };
   };

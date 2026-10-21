@@ -23,7 +23,7 @@
     };
 
     dsh-nix = {
-      url = "github:Samuka007/dsh-nix";
+      url = "github:0xd3174/dsh-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
