@@ -165,28 +165,7 @@
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "nixpkgs-patcher": "nixpkgs-patcher",
-        "noctalia": "noctalia",
-        "rtk-nix": "rtk-nix"
-      }
-    },
-    "rtk-nix": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1792751700,
-        "narHash": "sha256-0thyxdWaC93t49BJNSjWCX97h7+2LBLDwLScjjdZbFU=",
-        "owner": "0xd3174",
-        "repo": "rtk-nix",
-        "rev": "f5d7129f949c490b59f8db8a2923ff9fa73ae53c",
-        "type": "github"
-      },
-      "original": {
-        "owner": "0xd3174",
-        "repo": "rtk-nix",
-        "type": "github"
+        "noctalia": "noctalia"
       }
     },
     "systems": {

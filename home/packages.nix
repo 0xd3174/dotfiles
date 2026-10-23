@@ -25,7 +25,7 @@
     ############
 
     helix # Terminal code editor
-    inputs.rtk-nix.packages.${pkgs.system}.default # LLM token proxy
+    rtk # LLM token proxy
 
     ###############
     ### Larping ###
