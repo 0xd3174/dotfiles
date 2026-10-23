@@ -26,6 +26,11 @@
       url = "github:0xd3174/dsh-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    rtk-nix = {
+      url = "github:0xd3174/rtk-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
 
